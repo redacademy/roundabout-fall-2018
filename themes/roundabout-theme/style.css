@@ -43,6 +43,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Martel+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -233,8 +235,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #262626;
+  font-family: Martel Sans, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -257,7 +259,7 @@ address {
   margin: 0 0 1.5rem; }
 
 pre {
-  background: #eee;
+  background: #ffffff;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -268,16 +270,16 @@ pre {
   padding: 1.6rem; }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: sans-serif;
   font-size: 15px;
   font-size: 0.9375rem; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #262626;
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background: #ffffff;
   text-decoration: none; }
 
 big {
@@ -300,7 +302,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #ffffff;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -312,7 +314,7 @@ q {
     content: ''; }
 
 hr {
-  background-color: #ccc;
+  background-color: grey;
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
@@ -347,6 +349,73 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+/*--------------------------------------------------------------
+# Roundabout Setup Elements
+--------------------------------------------------------------*/
+h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 67px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.12;
+  letter-spacing: 2px;
+  color: #262626; }
+
+h2 {
+  font-family: Martel Sans, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.5px;
+  color: #262626; }
+
+h3 {
+  font-family: Martel Sans, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.5px;
+  color: #ffffff; }
+
+.tagline {
+  font-family: Montserrat, sans-serif;
+  font-size: 160px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: 5px;
+  color: #ffffff; }
+
+.info-numbers {
+  font-family: Montserrat, sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.75;
+  letter-spacing: 3px;
+  color: #aee34d; }
+
+button {
+  font-family: Martel Sans, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ff5182; }
+  button:hover {
+    background-color: #ff1e5d; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -420,11 +489,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: red; }
   a:visited {
-    color: purple; }
+    color: red; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: red; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -508,12 +577,12 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: #4a90e2;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;

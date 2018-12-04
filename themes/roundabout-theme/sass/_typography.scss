@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
+	color: $main_black;
 	font-family: $font__main;
 	@include font-size(1);
 	line-height: $font__line-height-body;
@@ -38,7 +38,7 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: $main_white;
 	font-family: $font__pre;
 	@include font-size(0.9375);
 	line-height: $font__line-height-pre;
@@ -49,17 +49,17 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: $font__code;
+	font-family: sans-serif;
 	@include font-size(0.9375);
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted $main_black;
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: $main_white;
 	text-decoration: none;
 }
 

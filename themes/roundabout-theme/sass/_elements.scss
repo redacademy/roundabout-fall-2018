@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $main_white; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote,
@@ -29,7 +29,7 @@ q {
 }
 
 hr {
-  background-color: $color__background-hr;
+  background-color: grey;
   border: 0;
   height: 1px;
   margin-bottom: $base__space-unit;
@@ -70,4 +70,81 @@ img {
 table {
   margin: 0 0 $base__space-unit;
   width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Roundabout Setup Elements
+--------------------------------------------------------------*/
+
+h1 {
+  font-family: $font__main-titles;
+  font-size: 67px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.12;
+  letter-spacing: 2px;
+  color: $main_black;
+}
+
+h2 {
+  font-family: $font__main;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.5px;
+  color: $main_black;
+}
+
+h3 {
+  font-family: $font__main;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.5px;
+  color: $main_white;
+}
+
+.tagline {
+  font-family: $font__main-titles;
+  font-size: 160px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.13;
+  letter-spacing: 5px;
+  color: $main_white;
+}
+
+.info-numbers {
+  font-family: $font__main-titles;
+  font-size: 100px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.75;
+  letter-spacing: 3px;
+  color: $main_green;
+}
+
+button {
+  font-family: $font__main;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $main_white;
+  background-color: $main_pink;
+
+  &:hover {
+    background-color: darken($main_pink, 10%);
+  	}
 }
