@@ -104,4 +104,23 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+function my_multi_col($content) {
+	$pagename = get_the_title();
+	if($pagename != 'Our services') {
+		return $content;
+	}
+
+	$columns = explode( '<h2>', $content );
+	$split_columns = array();
+
+	foreach ( $columns as $column ) {
+		if(trim($column) != '') {
+			$split_columns[] = '<div class="column"><h2>'.$column.'</div>';
+		}
+	}
+	$split_content = implode('', $split_columns);
+	return  $split_content;
+}
+
+add_filter('the_content', 'my_multi_col');
 
