@@ -5,6 +5,9 @@
 html {
   box-sizing: border-box;
   @include font-size(1);
+
+  background: url(../../images/gradient-final.jpg) #eb5e79 repeat fixed;
+  background-size: cover;  
 }
 
 *,
@@ -15,8 +18,9 @@ html {
 }
 
 body {
-  background: $main_white; /* Fallback for when there is no custom background color defined. */
+
 }
+
 
 blockquote,
 q {
@@ -79,35 +83,63 @@ table {
 
 h1 {
   font-family: $font__main-titles;
-  font-size: 67px;
+  font-size: 30px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.12;
   letter-spacing: 2px;
   color: $main_black;
+  @include tablet{
+    font-size: 50px;
+  }
+  @include desktop{
+    font-size: 67px;
+  }
 }
 
 h2 {
   font-family: $font__main;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.67;
   letter-spacing: 0.5px;
   color: $main_black;
+  @include tablet{
+    font-size: 30px;
+  }
 }
 
 h3 {
   font-family: $font__main;
-  font-size: 30px;
+  font-size: 14px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.67;
   letter-spacing: 0.5px;
   color: $main_white;
+  @include tablet{
+    font-size: 30px;
+  }
+}
+
+p{
+  font-family: $font__main;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: $main_black;
+  @include tablet{
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+  }
 }
 
 .tagline {
