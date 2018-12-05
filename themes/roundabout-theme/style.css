@@ -362,7 +362,7 @@ h1 {
   color: #262626; }
   @media (min-width: 620px) {
     h1 {
-      font-size: 50px; } }
+      font-size: 45px; } }
   @media (min-width: 1080px) {
     h1 {
       font-size: 67px; } }
@@ -377,6 +377,9 @@ h2 {
   letter-spacing: 0.5px;
   color: #262626; }
   @media (min-width: 620px) {
+    h2 {
+      font-size: 25px; } }
+  @media (min-width: 1080px) {
     h2 {
       font-size: 30px; } }
 
@@ -789,9 +792,12 @@ header.site-header {
     word-spacing: 100vw; }
     @media (min-width: 620px) {
       header.site-header .site-branding p {
-        font-size: 160px;
+        font-size: 100px;
         line-height: 1.13;
         letter-spacing: 5px; } }
+    @media (min-width: 1080px) {
+      header.site-header .site-branding p {
+        font-size: 160px; } }
 
 body:not(.home) .site-branding {
   display: none; }
