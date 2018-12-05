@@ -1,16 +1,16 @@
 <?php
  /**
  *
- * @package   [SITE NAME] Functionality
+ * @package   Roundabout Functionality
  * @author    Your Name <your_email@email.com>
  * @license   GPL-2.0+
- * @copyright 2015 Your Name or Company
+ * @copyright 2018 Roundabout Dramatherapy
  *
  * @wordpress-plugin
- * Plugin Name: [SITE NAME] Functionality
+ * Plugin Name: Roundabout Functionality
  * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
  * Version:     1.0.0
- * Author:      Your Name
+ * Author:      Roundabout Dramatherapy
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
