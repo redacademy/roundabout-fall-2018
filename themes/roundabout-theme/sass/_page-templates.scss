@@ -2,11 +2,82 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+/* Header */
+
+header.site-header {
+    display: flex;
+    flex-direction: column-reverse;
+    .site-branding {
+        p {
+            @include tagline;
+            @include content-margin;
+            padding: 0;
+            margin-top: 5%;
+            word-spacing: 100vw;
+        }
+    }
+}
+body:not(.home){
+    .site-branding{
+        display: none;
+    }
+    .site-content{
+        .content-area{
+            margin-top: 4%;
+        }
+    }
+}
+
+body.home{
+    .site-content{
+        .content-area{
+            margin-top: 4%;
+        }
+    }
+}
+
+/* General Layout */
+
+.content-area{
+    margin-top: 8%;
+
+    .site-main > article{
+        position: relative;
+        padding: 5% 0;
+        &::after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            left: 10%;
+            top: 0;
+            z-index: -1;
+        }
+        .entry-header{
+            text-transform: uppercase;
+            img{
+                margin: 0;
+            }
+            .entry-title{
+                @include content-margin;
+            }
+            .entry-meta{
+                @include content-margin;
+            }
+        }
+        .entry-content{
+            p, h2, h3, h4{
+                @include content-margin;
+            }
+            figure{
+                margin: 0;
+            }
+        }
+    }
+}
+
 /* Front page */
-
-
-
-
 
 
 
@@ -44,4 +115,13 @@
         }
     }
 }
+
+
+/* Blog */
+header.entry-header{
+    img {
+        width: 100vw;
+    }
+} 
+
 
