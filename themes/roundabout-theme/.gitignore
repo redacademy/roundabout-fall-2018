@@ -23,3 +23,8 @@ ehthumbs.db
 # Ignore packages #
 # =============== #
 node_modules/
+
+# Ignore build folder #
+# =================== #
+themes/roundabout-theme/node_modules/
+themes/roundabout-theme/build/

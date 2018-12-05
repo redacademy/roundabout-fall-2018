@@ -23,3 +23,61 @@
 	width: 240px;
 	height: 60px;
 }
+
+//@queries
+$tablet-width: 620px;
+$desktop-width: 1080px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+// use it as: @include tablet / @include desktop
+
+//tagline
+@mixin tagline {
+	font-family: $font__main-titles;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 47px;
+	letter-spacing: 5px;
+	color: $main_white;
+	@include tablet {
+		font-size: 100px;
+		line-height: 1.13;
+		letter-spacing: 5px;
+	}
+	@include desktop{
+		font-size: 160px;
+	}
+
+  }
+
+  //content margins for elements
+  @mixin content-margin {
+	margin-left: 15%;
+	padding: 0 8% 0 3%;
+  }
+
+
+
+@mixin claim {
+	font-family: $font__main;
+	font-size: 30px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.67;
+	letter-spacing: 0.5px;
+	color: $main_black;
+}
