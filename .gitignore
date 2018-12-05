@@ -28,5 +28,5 @@ plugins/*
 themes/*
 !themes/roundabout-theme/
 # Ignore packages #
-themes/roundabout/node_modules/
-themes/roundabout/build/
+themes/roundabout-theme/node_modules/
+themes/roundabout-theme/build/
