@@ -8,7 +8,7 @@
 // Custom Post Type for the NEWS Page
 
 function news_init() {
-    // set up NEWS labels
+    // Set up NEWS labels
     $labelsnews = array(
         'name'                  => _x( 'News', 'Post Type General Name', 'text_domain' ),
         'singular_name'         => _x( 'News', 'Post Type Singular Name', 'text_domain' ),
@@ -39,13 +39,13 @@ function news_init() {
         'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
     );
     
-    // register post type
+    // Register NEWS post type
     $args = array(
         'label' => __( 'news', 'text_domain' ),
 	    'description' => __( 'News information pages.', 'text_domain' ),
         'labels' => $labelsnews,
-        'supports' => array('title', 'editor', 'thumbnail', 'comments', 'custom-fields'),
-		'taxonomies' => array( 'category', 'post_tag' ),
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
+		'taxonomies' => array( 'post_tag' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -53,10 +53,12 @@ function news_init() {
         'show_in_admin_bar' => true,
 	    'show_in_nav_menus' => true,
         'can_export' => true,
-        'has_archive' => 'news',
+        'has_archive' => true,
         'exclude_from_search' => false,
         'publicly_queryable' => true,
         'capability_type' => 'post',
+        'show_in_rest' => true, // needed for Gutenberg to work!
+        'template_lock' => 'all', // or 'insert' to allow moving blocks
         'hierarchical' => false,
         'query_var' => true,
         'menu_icon' => 'dashicons-format-aside',
@@ -70,3 +72,74 @@ function news_init() {
     register_post_type( 'news', $args );
 }
 add_action( 'init', 'news_init' );
+
+
+
+
+// Custom Post Type for the STORIES Page
+
+function stories_init() {
+    // Set up STORIES labels
+    $labelsstories = array(
+        'name'                  => _x( 'Stories', 'Post Type General Name', 'text_domain' ),
+        'singular_name'         => _x( 'Story', 'Post Type Singular Name', 'text_domain' ),
+        'menu_name'             => __( 'Stories', 'text_domain' ),
+        'name_admin_bar'        => __( 'stories', 'text_domain' ),
+        'archives'              => __( 'Item Archives', 'text_domain' ),
+        'attributes'            => __( 'Item Attributes', 'text_domain' ),
+        'parent_item_colon'     => __( 'Parent Stories:', 'text_domain' ),
+        'all_items'             => __( 'All Stories', 'text_domain' ),
+        'add_new_item'          => __( 'Add New Story', 'text_domain' ),
+        'add_new'               => __( 'Add Story', 'text_domain' ),
+        'new_item'              => __( 'New Item', 'text_domain' ),
+        'edit_item'             => __( 'Edit Story', 'text_domain' ),
+        'update_item'           => __( 'Update Story', 'text_domain' ),
+        'view_item'             => __( 'View Story', 'text_domain' ),
+        'view_items'            => __( 'View Stories', 'text_domain' ),
+        'search_items'          => __( 'Search stories', 'text_domain' ),
+        'not_found'             => __( 'No stories found', 'text_domain' ),
+        'not_found_in_trash'    => __( 'No stories found in Trash', 'text_domain' ),
+        'featured_image'        => __( 'Featured Image', 'text_domain' ),
+        'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+        'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
+        'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
+        'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+        'items_list'            => __( 'Items list', 'text_domain' ),
+        'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+        'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+    );
+    
+    // Register STORIES post type
+    $args = array(
+        'label' => __( 'stories', 'text_domain' ),
+	    'description' => __( 'Stories information pages.', 'text_domain' ),
+        'labels' => $labelsstories,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
+		'taxonomies' => array( 'categories','post_tag' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 4,
+        'show_in_admin_bar' => true,
+	    'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+        'show_in_rest' => true, // needed for Gutenberg to work!
+        'template_lock' => 'all', // or 'insert' to allow moving blocks
+        'hierarchical' => false,
+        'query_var' => true,
+        'menu_icon' => 'dashicons-book',
+
+        'template' => array(
+            array( 'core/paragraph', array(
+                'placeholder' => 'Add your story description here...',
+            ) ),
+        ),
+    );
+    register_post_type( 'stories', $args );
+}
+add_action( 'init', 'stories_init' );
