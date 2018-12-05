@@ -739,3 +739,23 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/* Footer */
+.site-footer {
+  background-color: #885656; }
+  .site-footer .site-info .contact-widget ul {
+    list-style: none;
+    padding-left: 0; }
+    .site-footer .site-info .contact-widget ul li {
+      color: white;
+      line-height: 32px;
+      font-size: 0.875rem; }
+  .site-footer .site-info .images-widget {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .site-footer .site-info .images-widget img {
+      width: 109px;
+      height: 52px; }
