@@ -68,3 +68,16 @@ $desktop-width: 1080px;
 	margin-left: 15%;
 	padding: 0 8% 0 3%;
   }
+
+
+
+@mixin claim {
+	font-family: $font__main;
+	font-size: 30px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.67;
+	letter-spacing: 0.5px;
+	color: $main_black;
+}
