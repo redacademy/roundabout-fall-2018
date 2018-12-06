@@ -104,23 +104,23 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
-function my_multi_col($content) {
+function split_to_sections($content) {
 	$pagename = get_the_title();
 	if($pagename != 'Our services') {
 		return $content;
 	}
 
-	$columns = explode( '<h2>', $content );
-	$split_columns = array();
+	$sections = explode( '<h2>', $content );
+	$final_sections = array();
 
-	foreach ( $columns as $column ) {
-		if(trim($column) != '') {
-			$split_columns[] = '<div class="column"><h2>'.$column.'</div>';
+	foreach ( $sections as $section ) {
+		if(trim($section) != '') {
+			$final_sections[] = '<section><h2>'.$section.'</section>';
 		}
 	}
-	$split_content = implode('', $split_columns);
+	$split_content = implode('', $final_sections);
 	return  $split_content;
 }
 
-add_filter('the_content', 'my_multi_col');
+add_filter('the_content', 'split_to_sections');
 
