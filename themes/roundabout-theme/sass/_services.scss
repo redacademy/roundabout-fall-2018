@@ -1,0 +1,29 @@
+.content-services {
+  .entry-content {
+    @include content-margin;
+
+    section {
+      &:nth-child(1) {
+        background: url("../../images/face-hands-2@2x.png") no-repeat;
+        background-size: 290px 235px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          margin-top: 235px;
+        }
+      }
+
+      &:nth-child(2) {
+        background: url("../../images/two-faces-2@3x.png") no-repeat;
+        background-size: 250px 309px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          margin-top: 309px;
+        }
+      }
+    }
+  }
+}
