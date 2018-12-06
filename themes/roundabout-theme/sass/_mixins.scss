@@ -45,7 +45,7 @@ $desktop-width: 1080px;
 @mixin tagline {
 	font-family: $font__main-titles;
 	text-transform: uppercase;
-	font-size: 40px;
+	font-size: 2.5rem;
 	font-weight: bold;
 	font-style: normal;
 	font-stretch: normal;
@@ -58,7 +58,7 @@ $desktop-width: 1080px;
 		letter-spacing: 5px;
 	}
 	@include desktop{
-		font-size: 160px;
+		font-size: 10rem;
 	}
 
   }
@@ -73,7 +73,7 @@ $desktop-width: 1080px;
 
 @mixin claim {
 	font-family: $font__main;
-	font-size: 30px;
+	font-size: 1.875rem;
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
