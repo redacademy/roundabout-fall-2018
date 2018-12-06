@@ -84,7 +84,6 @@ body.home{
 /* Footer */
 
 .site-footer {
-    background-color: rgb(136, 86, 86);
     padding: 25px 0 0 18px;
     
         .footer-container {
@@ -103,6 +102,7 @@ body.home{
                     li {
                         list-style-type: none;
                         font-size: 11px;
+                        line-height: 1.8;
                     }
 
                     .info {
@@ -121,11 +121,10 @@ body.home{
             display: flex;
             align-items: flex-end;
             width: 70%;
-            flex-wrap: wrap;
 
                 img {
                     margin: 1px;
-                    // box-shadow here
+                    border: 0.5px solid black;
                 }
 
                 .badth-logo {

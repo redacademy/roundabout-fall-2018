@@ -841,7 +841,6 @@ body.home .site-content .content-area {
 /* Front page */
 /* Footer */
 .site-footer {
-  background-color: #885656;
   padding: 25px 0 0 18px; }
   .site-footer .footer-container {
     display: -webkit-box;
@@ -852,7 +851,8 @@ body.home .site-content .content-area {
     padding: 0; }
   .site-footer .content .widget-container li {
     list-style-type: none;
-    font-size: 11px; }
+    font-size: 11px;
+    line-height: 1.8; }
   .site-footer .content .widget-container .info {
     color: black;
     margin: 0; }
@@ -866,11 +866,10 @@ body.home .site-content .content-area {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    width: 70%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    width: 70%; }
     .site-footer .images-widget img {
-      margin: 1px; }
+      margin: 1px;
+      border: 0.5px solid black; }
     .site-footer .images-widget .badth-logo {
       height: 38px;
       width: 81px; }
