@@ -56,11 +56,10 @@ $desktop-width: 1080px;
 		font-size: 100px;
 		line-height: 1.13;
 		letter-spacing: 5px;
-	}
+		}
 	@include desktop{
 		font-size: 10rem;
-	}
-
+		}
   }
 
   //content margins for elements
