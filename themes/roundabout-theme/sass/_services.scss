@@ -4,24 +4,58 @@
 
     section {
       &:nth-child(1) {
-        background: url("../../images/face-hands-2@2x.png") no-repeat;
+        background: url("../../images/face-hands-2@3x.png") no-repeat;
         background-size: 290px 235px;
+        background-position: 5%;
         display: flex;
         flex-direction: column;
 
         h2 {
-          margin-top: 235px;
+          margin-top: 245px;
+        }
+
+        @include desktop {
+          align-items: flex-end;
+          background-position: left;
+          h2 {
+            margin-top: 0;
+            align-self: center;
+          }
+
+          p {
+            max-width: 55%;
+            padding-right: 0;
+          }
         }
       }
 
       &:nth-child(2) {
         background: url("../../images/two-faces-2@3x.png") no-repeat;
         background-size: 250px 309px;
+        background-position: 95%;
         display: flex;
         flex-direction: column;
 
         h2 {
-          margin-top: 309px;
+          margin-top: 320px;
+          margin-left: 0;
+        }
+
+        p {
+          margin-left: 0;
+        }
+
+        @include desktop {
+          align-items: flex-start;
+          background-position: right;
+          h2 {
+            margin-top: 0;
+          }
+
+          p {
+            max-width: 55%;
+            padding-right: 0;
+          }
         }
       }
     }
