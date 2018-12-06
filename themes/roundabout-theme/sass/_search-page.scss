@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Search Page
+--------------------------------------------------------------*/
+
+.search-results{
+
+	.site-main {
+		.page-title {	
+			@include tagline;	
+			@include content-margin;
+			padding: 0;
+			margin-top: 5%;
+		}	
+		.entry-title, .entry-meta, .entry-summary{
+			@include content-margin;
+			padding: 0;
+			margin-top: 5%;
+		}
+	}	
+}
+
