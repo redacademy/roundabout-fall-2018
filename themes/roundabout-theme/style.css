@@ -889,3 +889,31 @@ header.entry-header img {
   @media (min-width: 1080px) {
     .error404 .page-title {
       font-size: 160px; } }
+
+.content-services .entry-content {
+  margin-left: 15%;
+  padding: 0 8% 0 3%; }
+  .content-services .entry-content section:nth-child(1) {
+    background: url("../../images/face-hands-2@2x.png") no-repeat;
+    background-size: 290px 235px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .content-services .entry-content section:nth-child(1) h2 {
+      margin-top: 235px; }
+  .content-services .entry-content section:nth-child(2) {
+    background: url("../../images/two-faces-2@3x.png") no-repeat;
+    background-size: 250px 309px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .content-services .entry-content section:nth-child(2) h2 {
+      margin-top: 309px; }
