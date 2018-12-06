@@ -104,4 +104,23 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+function split_to_sections($content) {
+	$pagename = get_the_title();
+	if($pagename != 'Our services') {
+		return $content;
+	}
+
+	$sections = explode( '<h2>', $content );
+	$final_sections = array();
+
+	foreach ( $sections as $section ) {
+		if(trim($section) != '') {
+			$final_sections[] = '<section><h2>'.$section.'</section>';
+		}
+	}
+	$split_content = implode('', $final_sections);
+	return  $split_content;
+}
+
+add_filter('the_content', 'split_to_sections');
 
