@@ -839,60 +839,51 @@ body.home .site-content .content-area {
       margin: 0; }
 
 /* Front page */
-
 /* Footer */
 .site-footer {
-  background-color: #885656; }
-  .site-footer .site-info .contact-widget ul {
-    list-style: none;
-    padding-left: 0; }
-    .site-footer .site-info .contact-widget ul li {
-      color: white;
-      line-height: 32px;
-      font-size: 0.875rem; }
-  .site-footer .site-info .images-widget {
+  background-color: #885656;
+  padding: 25px 0 0 18px; }
+  .site-footer .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .site-footer .content .widget-container ul {
+    margin: 0;
+    padding: 0; }
+  .site-footer .content .widget-container li {
+    list-style-type: none;
+    font-size: 11px; }
+  .site-footer .content .widget-container .info {
+    color: black;
+    margin: 0; }
+    .site-footer .content .widget-container .info a {
+      color: black;
+      text-decoration: none; }
+  .site-footer .images-widget {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     width: 70%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    .site-footer .site-info .images-widget img {
-      width: 109px;
-      height: 52px; }
+    .site-footer .images-widget img {
+      margin: 1px; }
+    .site-footer .images-widget .badth-logo {
+      height: 38px;
+      width: 81px; }
+    .site-footer .images-widget .hcpc-logo {
+      height: 38px;
+      width: 37px; }
+  .site-footer .site-info .copyright-container {
+    font-size: 5px;
+    text-align: center; }
 
 /* Blog */
 header.entry-header img {
   width: 100vw; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*--------------------------------------------------------------
 # 404 Page
