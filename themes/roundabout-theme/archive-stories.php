@@ -9,6 +9,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
+			<header class="page-header">
+				<?php the_archive_title( '<h1 class="page-title">', '</h1>' );?>
+			</header><!-- .page-header -->
+		
 	
 <?php // custom loop to have the first story open ?>
 
@@ -30,17 +35,7 @@ $stories = new WP_Query($args);
 
 <?php // Default Loop to show content from stories ?>
 		<?php if ( have_posts() ) : ?>
-
-			<article>
-				<header class="page-header">
-					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-					?>
-				</header><!-- .page-header -->
-			</article>
-
-			
-
+	
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 

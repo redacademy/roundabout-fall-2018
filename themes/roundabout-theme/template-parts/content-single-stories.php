@@ -12,10 +12,13 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
-		<i class="quote-icon">"</i>
-		<p class="quote">
-			<?php echo CFS() ->get('stories-quote'); ?>
-		</p>
+		
+		<div class="quote-content">
+			<i class="fa fa-quote-left"></i>
+			<p class="quote">
+				<?php echo CFS() ->get('stories-quote'); ?>
+			</p>
+		</div>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 

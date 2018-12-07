@@ -83,7 +83,7 @@ table {
 
 h1 {
   font-family: $font__main-titles;
-  font-size: 1.875rem;
+  font-size: 1.6rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -92,7 +92,7 @@ h1 {
   color: $main_black;
   text-transform: uppercase;
   @include tablet{
-    font-size: 2.8125rem;
+    font-size: 2.8rem;
   }
   @include desktop{
     font-size: 4rem;
@@ -140,7 +140,7 @@ p{
   letter-spacing: 0.3px;
   color: $main_black;
   @include tablet{
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 32px;
     letter-spacing: 0.8px;
   }
