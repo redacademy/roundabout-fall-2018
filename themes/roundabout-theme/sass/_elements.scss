@@ -90,6 +90,7 @@ h1 {
   line-height: 1.12;
   letter-spacing: 2px;
   color: $main_black;
+  text-transform: uppercase;
   @include tablet{
     font-size: 2.8125rem;
   }

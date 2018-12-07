@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Archive Stories Page
+--------------------------------------------------------------*/
+
+
+.post-type-archive-stories {
+	.page-header{
+		@include content-margin;
+	}
+}
+.quote {
+	@include claim;
+	@include content-margin;
+}
