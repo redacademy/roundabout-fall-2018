@@ -84,34 +84,64 @@ body.home{
 /* Footer */
 
 .site-footer {
-    background-color: rgb(136, 86, 86);
+    padding: 25px 0 0 18px;
     
-    .site-info {
-        // background-color: black;
+        .footer-container {
+            display: flex;
+        }
+        
+            .content {
 
-        .contact-widget {
+                .widget-container {
 
-            ul {
-                list-style: none;
-                padding-left: 0;
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                    }
 
-                li {
-                    color: white;
-                    line-height: 32px;
-                    font-size: 0.875rem;
+                    li {
+                        list-style-type: none;
+                        font-size: 11px;
+                        line-height: 1.8;
+                    }
+
+                    .info {
+                        color: black;
+                        margin: 0;
+
+                        a {
+                            color: black;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
-        }
 
         .images-widget {
             display: flex;
+            align-items: flex-end;
             width: 70%;
-            flex-wrap: wrap;
 
                 img {
-                    width: 109px;
-                    height: 52px;
+                    margin: 1px;
+                    border: 0.5px solid black;
                 }
+
+                .badth-logo {
+                    height: 38px;
+                    width: 81px;
+                }
+
+                .hcpc-logo {
+                    height: 38px;
+                    width: 37px;
+                }
+        }
+    .site-info {
+
+        .copyright-container {
+            font-size: 5px;
+            text-align: center;
         }
     }
 }
