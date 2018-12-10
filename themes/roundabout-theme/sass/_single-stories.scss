@@ -4,8 +4,10 @@
 
 .single-stories, .post-type-archive-stories {
 	.quote-content {
-		margin: 6% 0;
+		margin-top: 3rem;
 		.quote {
+			@include claim;
+			@include content-margin;
 			position: relative;
 			margin-left: 23%;
 			padding-top: 6%;
