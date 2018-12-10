@@ -15,7 +15,7 @@ function custom_taxonomy() {
 	$labels = array(
 		'name'                       => _x( 'Team Members Types', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'Team Member Type', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Team Member Type', 'text_domain' ),
+		'menu_name'                  => __( 'Member Type', 'text_domain' ),
 		'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
@@ -43,7 +43,7 @@ function custom_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'team-member-type', array( 'member' ), $args );
-
+	register_taxonomy( 'member-type', array( 'member' ), $args );
+//same name to register_taxonomy
 }
 add_action( 'init', 'custom_taxonomy', 0 );
