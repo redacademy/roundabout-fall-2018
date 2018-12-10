@@ -9,7 +9,7 @@
 
 		.page-header{
 			h1.page-title {
-				padding-top: 30px;
+				padding-top: 6%;
 			}
 			@include content-margin;
 			&::after {
@@ -28,4 +28,15 @@
 		@include claim;
 		@include content-margin;
 	}
+	.stories-wrapper {
+		.entry-header {
+			.entry-title {
+				@include content-margin;
+			}
+		}
+		.entry-content {
+			@include content-margin;
+		}
+	}
 }
+
