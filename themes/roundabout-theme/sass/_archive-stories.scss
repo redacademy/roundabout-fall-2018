@@ -31,7 +31,7 @@
 	.stories-wrapper {
 		margin-left: 15%;
 		padding: 0 5% 0 3%;
-		@include desktop {
+		@include tablet {
 			display: grid;
 			grid-gap: 3rem;
 			grid-template-columns: 45% 45%;
@@ -39,7 +39,7 @@
 		.stories-container {
 			.entry-header {
 				h2 {
-					font-size: 1.5rem;
+					font-size: 4rem;
 					margin: 1rem 0 0 0;
 				}
 			}
