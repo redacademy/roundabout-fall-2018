@@ -161,11 +161,6 @@ body:not(.post-type-archive-member){
                             }
                         }
 
-                        @include {
-                            
-                        }
-                    }
-
                     .info {
                         color: black;
                         margin: 0;
@@ -207,18 +202,17 @@ body:not(.post-type-archive-member){
         .copyright-container {
             font-size: 5px;
             text-align: center;
+            }
         }
     }
 }
-
 
 /* Blog */
 body:not(.post-type-archive-member){
     header.entry-header{
         img {
             width: 100vw;
+            }
         }
-    } 
+    }
 }
-
-
