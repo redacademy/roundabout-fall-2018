@@ -2,7 +2,7 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Header */
+/* Front page Header */
 
 header.site-header {
     display: flex;
@@ -37,41 +37,47 @@ body.home{
 }
 
 /* General Layout */
+// :not(.post-type-archive-member)
+body:not(.post-type-archive-member){
+    .content-area{
+        margin-top: 8%;
 
-.content-area{
-    margin-top: 8%;
-
-    .site-main > article{
-        position: relative;
-        padding: 5% 0;
-        &::after {
-            content: "";
-            background-color: #fff;
-            position: absolute;
-            width: 90%;
-            height: 100%;
-            left: 10%;
-            top: 0;
-            z-index: -1;
-        }
-        .entry-header{
-            text-transform: uppercase;
-            img{
-                margin: 0;
+        .site-main > article{
+            position: relative;
+            padding: 5% 0;
+            &::after {
+                content: "";
+                background-color: #fff;
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                left: 10%;
+                top: 0;
+                z-index: -1;
             }
-            .entry-title{
-                @include content-margin;
-            }
-            .entry-meta{
-                @include content-margin;
-            }
+            .entry-header{
+                text-transform: uppercase;
+                img{
+                    margin: 0;
+                }
+                .entry-title{
+                    @include content-margin;
+                }
+                .entry-meta{
+                    @include content-margin;
+                }
         }
         .entry-content{
             p, h1, h2, h3, h4, fieldset{
                 @include content-margin;
             }
-            figure{
-                margin: 0;
+            .entry-content{
+                p, h2, h3, h4{
+                    @include content-margin;
+                }
+                figure{
+                    margin: 0;
+                }
             }
         }
     }
@@ -88,21 +94,76 @@ body.home{
     
         .footer-container {
             display: flex;
+            margin-left: 18px;
+            
+            @include desktop {
+                margin-left: 146px;
+            }
         }
         
             .content {
+                width: 100px;
+
+                @include desktop {
+                    width: initial;
+                }
 
                 .widget-container {
-
+                    display: inline-block;
+                    
                     ul {
                         margin: 0;
                         padding: 0;
+
+                        @include desktop {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr;
+                        }
                     }
 
                     li {
                         list-style-type: none;
                         font-size: 11px;
                         line-height: 1.8;
+
+                        @include desktop {
+                            font-size: 15px;
+
+                            &:nth-child(1) {
+                                grid-row-start: 1;
+                                grid-column-start: 2;
+                            }
+
+                            &:nth-child(2) {
+                                grid-column-start: 2;
+                                grid-row-start: 2;
+                            }
+                            
+                            &:nth-child(3) {
+                                grid-row-start: 1;
+                                grid-column-start: 1;
+                            }
+
+                            &:nth-child(4) {
+                                grid-row-start: 2;
+                                grid-column-start: 1;
+                            }
+
+                            &:nth-child(5) {
+                                grid-row-start: 3;
+                                grid-column-start: 1;
+                            }
+
+                            &:nth-child(6) {
+                                grid-row-start: 4;
+                                grid-column-start: 1;
+                            }
+                        }
+
+                        @include {
+                            
+                        }
                     }
 
                     .info {
@@ -111,16 +172,20 @@ body.home{
 
                         a {
                             color: black;
-                            text-decoration: none;
+                            text-decoration: underline;
                         }
                     }
                 }
             }
 
         .images-widget {
-            display: flex;
+            display: inline-flex;
             align-items: flex-end;
-            width: 70%;
+
+            @include desktop {
+                align-items: flex-start;
+                margin-left: 30px;
+            }
 
                 img {
                     margin: 1px;
@@ -148,10 +213,12 @@ body.home{
 
 
 /* Blog */
-header.entry-header{
-    img {
-        width: 100vw;
-    }
-} 
+body:not(.post-type-archive-member){
+    header.entry-header{
+        img {
+            width: 100vw;
+        }
+    } 
+}
 
 

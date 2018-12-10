@@ -1,0 +1,202 @@
+/*--------------------------------------------------------------
+# Page Team Members
+--------------------------------------------------------------*/
+
+/* Team Members */
+
+
+body.page{
+    .site-content{
+        .post-type-archive-member{
+            margin-top: 0;
+
+            .site-main {
+                position: relative;
+                padding-bottom: 2rem;
+                
+                &::after {
+                    content: "";
+                    background-color: $main_white;
+                    position: absolute;
+                    width: 90%;
+                    height: 110%;
+                    left: 10%;
+                    top: -50px;
+                    z-index: -1;
+                }
+                .page-header{
+                    // flex-basis: 100%;
+                    @include content-margin;
+                    ul{
+                        margin-left: 0;
+                        padding-left: 0;
+                        li{
+                            display: block;
+                            @include tablet{
+                                display: inline-block;   
+                                p{
+                                    // font-size: 16px;
+                                    a{
+                                    margin-right: 1rem;
+                                    font-size: 16px;
+                                    } 
+                                }    
+                            }
+                            @include desktop{
+                                display: inline-block;   
+                                p{
+                                    // font-size: 18px;
+                                    a{
+                                    margin-right: 2rem;
+                                    } 
+                                }    
+                            }
+                            p{
+                                position: relative;
+                                a{
+                                    // font-size: 18px;
+                                    letter-spacing: .5px;
+                                    font-weight: 500;
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                    color: $main_black;
+                                    
+                                    &:hover::after, &:active::after, &.active::after{
+                                        content: "";
+                                        position: absolute;
+                                        width: 90%;
+                                        height: 5px;
+                                        left: 0;
+                                        bottom: -6px;
+                                        background-color: $main_green;
+                                    }
+                                    &:hover, &.active{
+                                        color: $main_black;
+                                        font-weight: 700;
+                                        @include tablet{
+                                             letter-spacing: .2px;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+                .content-profiles{
+                    margin-left: 10%;
+                    display: flex;
+                    flex-wrap: wrap; 
+                    background: transparent;
+                        
+                    article{
+                        
+                        flex-basis: 100%;
+                        margin-bottom: 0;
+                        perspective: 1000px;
+
+                        &:hover .inner{
+                            cursor: pointer;
+                            transform: rotateY(180deg);
+                        }
+                        @include tablet{
+                            flex-basis: 50%;
+                        }
+
+                        .inner{
+                            position: relative;
+                            background-color: $main_green;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform 0.6s;
+                            transform-style: preserve-3d;
+                            // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                            
+                            .entry-header{
+                                padding: 1rem;
+                                position: absolute;
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                z-index: 2;
+
+                                @include tablet{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+                                @include desktop{
+                                    flex-wrap: nowrap;
+                                    img{
+                                        // margin-left: 15%;
+                                    }
+                                }
+                                img{
+                                    border-radius: 230px;
+                                    max-width: 100%;
+                                    width: auto;
+                                    max-height: 268px;
+                                    @include center-block;
+
+                                    @include desktop{
+                                        margin-left: 15%;
+                                    }
+                                }
+                                .entry-title{
+                                    align-self: flex-end;
+                                    margin-left: 1rem;
+                                    text-align: center;
+                                    font-size: 30px;
+                                    color: $main_black;
+                                    @include tablet{
+                                        text-align: center;
+                                        margin: 1rem auto;
+                                    }
+                                    @include desktop{
+                                        text-align: left;
+                                        word-spacing: 100vw;
+                                    }
+                                }
+                            }
+                            .info{
+                                padding: 1rem;
+                                background: $hover_green;
+                                overflow: scroll;
+
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                transform: rotateY(180deg);
+                                z-index: 1;
+                                .title{
+                                    margin: 0;
+                                    font-size: 30px;
+                                }
+                                p{
+                                    font-size: 15px;
+                                    line-height: 23px;
+                                    color: $main_white;
+                                    @include tablet{
+                                        font-size: 15px;
+                                        line-height: 23px;
+                                    }
+                                    @include desktop{
+                                        font-size: 18px;
+                                        line-height: 32px;
+                                    }
+                                }
+                                &.info-hover{
+                                    top: 0;
+                                    bottom: 0;
+                                    display:inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
