@@ -27,6 +27,8 @@
 //@queries
 $tablet-width: 620px;
 $desktop-width: 1080px;
+$desktop-width-1440: 1440px;
+$desktop-width-1920: 1920px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
@@ -36,6 +38,18 @@ $desktop-width: 1080px;
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-1440 {
+  @media (min-width: #{$desktop-width-1440}) {
+    @content;
+  }
+}
+
+@mixin desktop-1920 {
+  @media (min-width: #{$desktop-width-1920}) {
     @content;
   }
 }
