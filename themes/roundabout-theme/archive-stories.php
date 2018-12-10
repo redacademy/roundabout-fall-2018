@@ -37,22 +37,23 @@ $stories = new WP_Query($args);
 		<?php if ( have_posts() ) : ?>
 	
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="stories-wrapper">
-					<?php
-						get_template_part( 'template-parts/content', 'stories' );
-					?>
-				</div>
-			<?php endwhile; ?>
+			<div class="stories-wrapper">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="stories-container">
+						<?php
+							get_template_part( 'template-parts/content', 'stories' );
+						?>
+					</div>
+				<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+				<?php the_posts_navigation(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
-
+			<?php endif; ?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
