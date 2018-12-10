@@ -86,11 +86,20 @@ $desktop-width-1920: 1920px;
 
 @mixin claim {
 	font-family: $font__main;
-	font-size: 1.875rem;
+	font-size: 1.1rem;
+	text-transform: initial;
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
 	font-stretch: normal;
-	line-height: 1.67;
+	line-height: 1.5;
 	letter-spacing: 0.5px;
 	color: $main_black;
+	@include tablet {
+		font-size: 1.875rem;
+		line-height: 1.67;
+	}
+	@include desktop {
+		font-size: 1.875rem;
+		line-height: 1.67;
+	}
 }
