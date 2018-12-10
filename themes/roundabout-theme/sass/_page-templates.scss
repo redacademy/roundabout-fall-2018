@@ -2,7 +2,7 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page Header */
+/* Header */
 
 header.site-header {
     display: flex;
@@ -37,47 +37,41 @@ body.home{
 }
 
 /* General Layout */
-// :not(.post-type-archive-member)
-body:not(.post-type-archive-member){
-    .content-area{
-        margin-top: 8%;
 
-        .site-main > article{
-            position: relative;
-            padding: 5% 0;
-            &::after {
-                content: "";
-                background-color: #fff;
-                position: absolute;
-                width: 90%;
-                height: 100%;
-                left: 10%;
-                top: 0;
-                z-index: -1;
+.content-area{
+    margin-top: 8%;
+
+    .site-main > article{
+        position: relative;
+        padding: 5% 0;
+        &::after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            left: 10%;
+            top: 0;
+            z-index: -1;
+        }
+        .entry-header{
+            text-transform: uppercase;
+            img{
+                margin: 0;
             }
-            .entry-header{
-                text-transform: uppercase;
-                img{
-                    margin: 0;
-                }
-                .entry-title{
-                    @include content-margin;
-                }
-                .entry-meta{
-                    @include content-margin;
-                }
+            .entry-title{
+                @include content-margin;
+            }
+            .entry-meta{
+                @include content-margin;
+            }
         }
         .entry-content{
             p, h1, h2, h3, h4, fieldset{
                 @include content-margin;
             }
-            .entry-content{
-                p, h2, h3, h4{
-                    @include content-margin;
-                }
-                figure{
-                    margin: 0;
-                }
+            figure{
+                margin: 0;
             }
         }
     }
@@ -160,10 +154,6 @@ body:not(.post-type-archive-member){
                                 grid-column-start: 1;
                             }
                         }
-
-                        @include {
-                            
-                        }
                     }
 
                     .info {
@@ -213,12 +203,10 @@ body:not(.post-type-archive-member){
 
 
 /* Blog */
-body:not(.post-type-archive-member){
-    header.entry-header{
-        img {
-            width: 100vw;
-        }
-    } 
-}
+header.entry-header{
+    img {
+        width: 100vw;
+    }
+} 
 
 
