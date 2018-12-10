@@ -16,13 +16,14 @@ a {
 		color: $color__link-hover;
 	}
 	&:focus {
-		outline: thin dotted;
+		outline: none;
 	}
 	&:hover,
 	&:active {
 		outline: 0;
 	}
 }
+
 
 /* Menus */
 
