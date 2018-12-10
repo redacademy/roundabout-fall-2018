@@ -83,24 +83,25 @@ table {
 
 h1 {
   font-family: $font__main-titles;
-  font-size: 30px;
+  font-size: 1.6rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.12;
   letter-spacing: 2px;
   color: $main_black;
+  text-transform: uppercase;
   @include tablet{
-    font-size: 45px;
+    font-size: 2.8rem;
   }
   @include desktop{
-    font-size: 67px;
+    font-size: 4rem;
   }
 }
 
 h2 {
   font-family: $font__main;
-  font-size: 16px;
+  font-size: 1.25rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -108,16 +109,16 @@ h2 {
   letter-spacing: 0.5px;
   color: $main_black;
   @include tablet{
-    font-size: 25px;
+    font-size: 1.5rem;
   }
   @include desktop{
-    font-size: 30px;
+    font-size: 2rem;
   }
 }
 
 h3 {
   font-family: $font__main;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -125,13 +126,13 @@ h3 {
   letter-spacing: 0.5px;
   color: $main_white;
   @include tablet{
-    font-size: 30px;
+    font-size: 1.25rem;
   }
 }
 
 p{
   font-family: $font__main;
-  font-size: 11px;
+  font-size: .90rem;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -139,7 +140,7 @@ p{
   letter-spacing: 0.3px;
   color: $main_black;
   @include tablet{
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 32px;
     letter-spacing: 0.8px;
   }
@@ -147,7 +148,7 @@ p{
 
 .tagline {
   font-family: $font__main-titles;
-  font-size: 160px;
+  font-size: 9rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -158,7 +159,7 @@ p{
 
 .info-numbers {
   font-family: $font__main-titles;
-  font-size: 100px;
+  font-size: 6.25rem;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -167,19 +168,12 @@ p{
   color: $main_green;
 }
 
-button {
+.entry-meta {
   font-family: $font__main;
-  font-size: 20px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 1px;
-  text-align: center;
-  color: $main_white;
-  background-color: $main_pink;
-
-  &:hover {
-    background-color: darken($main_pink, 10%);
-  	}
+  font-style: italic;
+  font-size: 0.75rem;
+  color: $main_black;
+  @include tablet {
+    font-size: 1rem;
+  }
 }

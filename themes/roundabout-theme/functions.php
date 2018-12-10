@@ -84,6 +84,8 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
  */
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+	wp_enqueue_style ('font-awesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
@@ -117,4 +119,114 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+function split_to_sections($content) {
+	$pagename = get_the_title();
+	if($pagename != 'Our services') {
+		return $content;
+	}
 
+	$sections = explode( '<h2>', $content );
+	$final_sections = array();
+
+	foreach ( $sections as $section ) {
+		if(trim($section) != '') {
+			$final_sections[] = '<section><h2>'.$section.'</section>';
+		}
+	}
+	$split_content = implode('', $final_sections);
+	return  $split_content;
+}
+
+add_filter('the_content', 'split_to_sections');
+
+
+/**
+ * Register widget area for footer.
+ */
+function tutsplus_widgets_init() {
+ 
+    // First footer widget area, located in the footer. Empty by default.
+  register_sidebar( array(
+        'name' => __( 'Footer Widget Area', 'tutsplus' ),
+        'id' => 'first-footer-widget-area',
+        'description' => __( 'The first footer widget area', 'tutsplus' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+ 
+    // Second Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Second Footer Widget Area', 'tutsplus' ),
+        'id' => 'second-footer-widget-area',
+        'description' => __( 'The second footer widget area', 'tutsplus' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+ 
+    // Third Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Third Footer Widget Area', 'tutsplus' ),
+        'id' => 'third-footer-widget-area',
+        'description' => __( 'The third footer widget area', 'tutsplus' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+ 
+    // Fourth Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Fourth Footer Widget Area', 'tutsplus' ),
+        'id' => 'fourth-footer-widget-area',
+        'description' => __( 'The fourth footer widget area', 'tutsplus' ),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) );
+         
+}
+ 
+// Register sidebars by running tutsplus_widgets_init() on the widgets_init hook.
+add_action( 'widgets_init', 'tutsplus_widgets_init' );
+
+
+// Remove "Archive:" from the archive title
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('/^\w+: /', '', $title);
+});
+
+
+function recent_posts($no_posts = 1, $excerpts = true) {
+
+	global $wpdb;
+ 
+	$request = "SELECT ID, post_title, post_excerpt FROM $wpdb->posts WHERE post_status = 'publish' AND post_type='stories' ORDER BY post_date DESC LIMIT $no_posts";
+ 
+	$posts = $wpdb->get_results($request);
+ 
+	if($posts) {
+ 
+				foreach ($posts as $posts) {
+						$post_title = stripslashes($posts->post_title);
+						$permalink = get_permalink($posts->ID);
+ 
+						$output .= '<li><h2><a href="' . $permalink . '" rel="bookmark" title="Permanent Link: ' . htmlspecialchars($post_title, ENT_COMPAT) . '">' . htmlspecialchars($post_title) . '</a></h2>';
+ 
+						if($excerpts) {
+								$output.= '<br />' . stripslashes($posts->post_excerpt);
+						}
+ 
+						$output .= '</li>';
+				}
+ 
+		} else {
+				$output .= '<li>No posts found</li>';
+		}
+ 
+	echo $output;
+ }

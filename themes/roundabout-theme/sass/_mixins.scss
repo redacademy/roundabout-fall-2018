@@ -27,6 +27,8 @@
 //@queries
 $tablet-width: 620px;
 $desktop-width: 1080px;
+$desktop-width-1440: 1440px;
+$desktop-width-1920: 1920px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
@@ -39,13 +41,25 @@ $desktop-width: 1080px;
     @content;
   }
 }
+
+@mixin desktop-1440 {
+  @media (min-width: #{$desktop-width-1440}) {
+    @content;
+  }
+}
+
+@mixin desktop-1920 {
+  @media (min-width: #{$desktop-width-1920}) {
+    @content;
+  }
+}
 // use it as: @include tablet / @include desktop
 
 //tagline
 @mixin tagline {
 	font-family: $font__main-titles;
 	text-transform: uppercase;
-	font-size: 40px;
+	font-size: 2.5rem;
 	font-weight: bold;
 	font-style: normal;
 	font-stretch: normal;
@@ -56,11 +70,10 @@ $desktop-width: 1080px;
 		font-size: 100px;
 		line-height: 1.13;
 		letter-spacing: 5px;
-	}
+		}
 	@include desktop{
-		font-size: 160px;
-	}
-
+		font-size: 10rem;
+		}
   }
 
   //content margins for elements
@@ -73,11 +86,20 @@ $desktop-width: 1080px;
 
 @mixin claim {
 	font-family: $font__main;
-	font-size: 30px;
+	font-size: 1.1rem;
+	text-transform: initial;
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
 	font-stretch: normal;
-	line-height: 1.67;
+	line-height: 1.5;
 	letter-spacing: 0.5px;
 	color: $main_black;
+	@include tablet {
+		font-size: 1.875rem;
+		line-height: 1.67;
+	}
+	@include desktop {
+		font-size: 1.875rem;
+		line-height: 1.67;
+	}
 }

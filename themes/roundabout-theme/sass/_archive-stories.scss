@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+# Archive Stories Page
+--------------------------------------------------------------*/
+
+
+.post-type-archive-stories {
+	.site-main {
+		position: relative;
+
+		.page-header{
+			h1.page-title {
+				padding-top: 30px;
+			}
+			@include content-margin;
+			&::after {
+				content: "";
+				background-color: $main_white;
+				position: absolute;
+				width: 90%;
+				height: 100%;
+				left: 10%;
+				top: 0;
+				z-index: -1;
+			}
+		}
+	}
+	.quote {
+		@include claim;
+		@include content-margin;
+	}
+}

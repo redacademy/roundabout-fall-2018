@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# Single Stories Page
+--------------------------------------------------------------*/
+
+.single-stories, .post-type-archive-stories {
+	.quote-content {
+		margin: 6% 0;
+		.quote {
+			position: relative;
+			margin-left: 23%;
+			padding-top: 6%;
+			@include tablet {
+				margin-left: 32%;
+				padding-top: 4%;
+			}
+			@include desktop {
+				margin-left: 42%;
+				padding-top: 3%;
+			}
+		}
+		i.fa-quote-left {
+			position: absolute;
+			margin-left: 17%;
+			color: $main_green;
+			font-size: 4rem;
+			@include tablet {
+				font-size: 6rem;
+				margin-left: 30%;
+			}
+			@include desktop {
+				font-size: 7rem;
+				margin-left: 40%;
+			}
+		}
+	}
+	h1.entry-title{
+		text-transform: initial;
+		@include tablet {
+			font-size: 1.7rem;
+		}
+	}
+}
+
