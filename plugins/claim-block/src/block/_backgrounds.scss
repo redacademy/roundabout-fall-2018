@@ -1,0 +1,66 @@
+@mixin backgrounds() {
+  .none {
+    border: 1px solid black;
+
+    button, a.button {
+      display: block;
+      text-decoration: none;
+      background-color: #aee34d;
+      &:hover {
+        background-color: darken(#aee34d, 10%);
+      }
+
+      .components-base-control__field {
+        margin: 8px;
+      }
+    }
+  }
+  .round {
+    border: 1px solid #aee34d;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+
+    button, a.button {
+      display: block;
+      text-decoration: none;
+      background-color: #aee34d;
+      &:hover {
+        background-color: darken(#aee34d, 10%);
+      }
+      .components-base-control__field {
+        margin: 8px;
+      }
+    }
+  }
+  .heart {
+    border: 1px solid #ff5182;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+
+    button, a.button {
+      display: block;
+      text-decoration: none;
+      background-color: #ff5182;
+      &:hover {
+        background-color: darken(#ff5182, 10%);
+      }
+    }
+    .components-base-control__field {
+      margin: 8px;
+    }
+  }
+}
+
+//@queries
+$tablet-width: 620px;
+$desktop-width: 1080px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
