@@ -3,12 +3,26 @@
  *
  * CSS for both Frontend+Backend.
  */
+@import "./backgrounds";
 
 .wp-block-cgb-block-claim-block  {
-  background: $red;
-  border: 0.2rem solid $black;
-  color: $black;
+
+  @include backgrounds();
+
   margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+  align-self: center;
+  width: 100%;
+
+  p {
+    margin: 0 auto !important;
+    padding: 3rem 4rem 4rem 8rem !important;
+  }
+
+  @include desktop {
+    width: 60% !important;
+
+    p {
+      padding: 3rem 2rem 4rem 2rem !important
+    }
+  }
 }

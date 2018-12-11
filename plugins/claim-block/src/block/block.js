@@ -11,8 +11,9 @@ import './editor.scss';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
-// const { Fragment } = wp.element;
-const { RichText } = wp.editor;
+const { RichText, BlockControls, AlignmentToolbar, InspectorControls } = wp.editor;
+const { Fragment } = wp.element;
+const { IconButton, Toolbar, TextControl, SelectControl, PanelBody} = wp.components;
 
 /**
  * Register: aa Gutenberg Block.
@@ -52,27 +53,119 @@ registerBlockType( 'cgb/block-claim-block', {
             source: 'html',
             selector: 'p',
         },
+
+        buttonText: {
+            type: 'string',
+            source: 'text',
+            selector: 'a.button'
+
+        },
+        background: {
+            type: 'string',
+            source: 'attribute',
+            selector: 'div[data-background]',
+            attribute: 'data-background'
+        },
+
+        buttonUrl: {
+            type: 'string',
+            source: 'attribute',
+            selector: 'a.button',
+            attribute: 'href'
+        }
     },
 
     edit({attributes, className, setAttributes}) {
-        const {content} = attributes;
+        const {content, buttonText, background, buttonUrl} = attributes;
+        const hasButton = buttonText && buttonText.length;
 
         function onChangeContent(newContent) {
             setAttributes({content: newContent});
         }
 
-        return (
-        <RichText
-        key="editable"
-        tagName="p"
-        className={ className }
-        onChange={ onChangeContent }
-        value={ content }
-        />
+        function toggleHasButton() {
+            if(!hasButton) {
+                setAttributes({buttonText: 'Button'});
+            } else {
+                setAttributes({buttonText: ''});
+            }
+        }
 
-    );
+        function onChangeButtonText(newButtonText) {
+            setAttributes({buttonText: newButtonText});
+        }
+
+        function onChangeBackground(newBackground) {
+            setAttributes({background: newBackground});
+        }
+
+        function onChangeButtonUrl(newButtonUrl) {
+            setAttributes({buttonUrl: newButtonUrl});
+        }
+
+
+        return (
+            <Fragment>
+                <InspectorControls>
+                    <PanelBody
+                        title='Background Icon Image'
+                    >
+                        <SelectControl
+                            onChange={ onChangeBackground }
+                            value={background}
+                            options={
+                                [
+                                    {'value': 'none', label: 'None'},
+                                    {'value': 'round', label: 'green round background'},
+                                    {'value': 'heart', label: 'pink heart background'},
+                                ]
+                            }
+                        />
+                    </PanelBody>
+                    <PanelBody
+                        title='Button options'
+                    >
+                        <IconButton
+                            className={{
+                                'is-active': hasButton,
+                                'components-toolbar__control': true
+                            }}
+                            icon="plus"
+                            label="Add button"
+                            onClick={ toggleHasButton }
+                        />
+                        { hasButton &&
+                        <TextControl
+                            label='Url'
+                            placeholder='url'
+                            value={ buttonUrl }
+                            onChange={ onChangeButtonUrl }
+                        />
+                        }
+                    </PanelBody>
+                </InspectorControls>
+                <div className={background}>
+
+                    <RichText
+                        key="editable"
+                        tagName="p"
+                        className={ className }
+                        onChange={ onChangeContent }
+                        value={ content }
+                    />
+                    { hasButton &&
+                        <button>
+                            <TextControl
+                                value={ buttonText }
+                                onChange={ onChangeButtonText }
+                            />
+                        </button>
+                    }
+                </div>
+            </Fragment>
+        );
     },
-    
+
 
 
 	/**
@@ -83,14 +176,23 @@ registerBlockType( 'cgb/block-claim-block', {
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
-    save( { attributes } ) {
-        const { content} = attributes;
+    save({attributes}) {
+        const hasButton = attributes.buttonText && attributes.buttonText.length;
 
         return (
-            <RichText.Content
-        value={ content }
-        tagName="p"
-            />
-    );
+            <div>
+                <div className={attributes.background} data-background={attributes.background}>
+                    <RichText.Content
+                        value={attributes.content}
+                        tagName="p"
+                    />
+                    {hasButton &&
+                    <a className={"button"} href={attributes.buttonUrl}>
+                        {attributes.buttonText}
+                    </a>
+                    }
+                </div>
+            </div>
+        );
     },
 } );

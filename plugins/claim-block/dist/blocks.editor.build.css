@@ -11,9 +11,42 @@
  * which makes it higher in priority.
  */
 .wp-block-cgb-block-claim-block {
-  background: #bada55;
-  border: 0.2rem solid #292929;
   color: #292929;
   margin: 0 auto;
   max-width: 740px;
   padding: 2rem; }
+
+div .none {
+  border: 1px solid black; }
+  div .none button, div .none a.button {
+    display: block;
+    text-decoration: none;
+    background-color: #aee34d; }
+    div .none button:hover, div .none a.button:hover {
+      background-color: #9adb22; }
+    div .none button .components-base-control__field, div .none a.button .components-base-control__field {
+      margin: 8px; }
+
+div .round {
+  border: 1px solid #aee34d;
+  background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat; }
+  div .round button, div .round a.button {
+    display: block;
+    text-decoration: none;
+    background-color: #aee34d; }
+    div .round button:hover, div .round a.button:hover {
+      background-color: #9adb22; }
+    div .round button .components-base-control__field, div .round a.button .components-base-control__field {
+      margin: 8px; }
+
+div .heart {
+  border: 1px solid #ff5182;
+  background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat; }
+  div .heart button, div .heart a.button {
+    display: block;
+    text-decoration: none;
+    background-color: #ff5182; }
+    div .heart button:hover, div .heart a.button:hover {
+      background-color: #ff1e5d; }
+  div .heart .components-base-control__field {
+    margin: 8px; }
