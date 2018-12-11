@@ -2,7 +2,7 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page Header */
+/* Header */
 
 header.site-header {
     display: flex;
@@ -14,6 +14,11 @@ header.site-header {
             padding: 0;
             margin-top: 5%;
             word-spacing: 100vw;
+            line-height: 37px;
+
+            @include minimum-width {
+                font-size: 1.9rem;
+            }
         }
     }
 }
@@ -37,47 +42,41 @@ body.home{
 }
 
 /* General Layout */
-// :not(.post-type-archive-member)
-body:not(.post-type-archive-member){
-    .content-area{
-        margin-top: 8%;
 
-        .site-main > article{
-            position: relative;
-            padding: 5% 0;
-            &::after {
-                content: "";
-                background-color: #fff;
-                position: absolute;
-                width: 90%;
-                height: 100%;
-                left: 10%;
-                top: 0;
-                z-index: -1;
+.content-area{
+    margin-top: 8%;
+
+    .site-main > article{
+        position: relative;
+        padding: 5% 0;
+        &::after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            left: 10%;
+            top: 0;
+            z-index: -1;
+        }
+        .entry-header{
+            text-transform: uppercase;
+            img{
+                margin: 0;
             }
-            .entry-header{
-                text-transform: uppercase;
-                img{
-                    margin: 0;
-                }
-                .entry-title{
-                    @include content-margin;
-                }
-                .entry-meta{
-                    @include content-margin;
-                }
+            .entry-title{
+                @include content-margin;
+            }
+            .entry-meta{
+                @include content-margin;
+            }
         }
         .entry-content{
             p, h1, h2, h3, h4, fieldset{
                 @include content-margin;
             }
-            .entry-content{
-                p, h2, h3, h4{
-                    @include content-margin;
-                }
-                figure{
-                    margin: 0;
-                }
+            figure{
+                margin: 0;
             }
         }
     }
@@ -87,126 +86,10 @@ body:not(.post-type-archive-member){
 
 
 
-/* Footer */
-
-.site-footer {
-    padding: 25px 0 0 18px;
-    
-    .footer-container {
-        display: flex;
-        margin-left: 18px;
-        
-        @include desktop {
-            margin-left: 146px;
-        }
-    }
-        
-    .content {
-        width: 100px;
-
-        @include desktop {
-            width: initial;
-        }
-
-        .widget-container {
-            display: inline-block;
-            
-            ul {
-                margin: 0;
-                padding: 0;
-
-                @include desktop {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr 1fr 1fr;
-                }
-            
-
-                li {
-                    list-style-type: none;
-                    font-size: 11px;
-                    line-height: 1.8;
-
-                    @include desktop {
-                        font-size: 15px;
-
-                        &:nth-child(1) {
-                            grid-row-start: 1;
-                            grid-column-start: 2;
-                        }
-
-                        &:nth-child(2) {
-                            grid-column-start: 2;
-                            grid-row-start: 2;
-                        }
-                        
-                        &:nth-child(3) {
-                            grid-row-start: 1;
-                            grid-column-start: 1;
-                        }
-
-                    .info {
-                        color: black;
-                        margin: 0;
-
-                        &:nth-child(6) {
-                            grid-row-start: 4;
-                            grid-column-start: 1;
-                        }
-                    }
-                } 
-            }  
-
-            .info {
-                color: black;
-                margin: 0;
-
-                a {
-                    color: black;
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-
-    .images-widget {
-        display: inline-flex;
-        align-items: flex-end;
-
-        @include desktop {
-            align-items: flex-start;
-            margin-left: 30px;
-        }
-
-        img {
-            margin: 1px;
-            border: 0.5px solid black;
-        }
-
-        .badth-logo {
-            height: 38px;
-            width: 81px;
-        }
-
-        .copyright-container {
-            font-size: 5px;
-            text-align: center;
-                }
-            }
-        }
-    }
-}
-
 /* Blog */
-body:not(.post-type-archive-member){
-    header.entry-header{
-        img {
-            width: 100vw;
-            }
-        }
+
+header.entry-header{
+    img {
+        width: 100vw;
     }
-
-
-
-
-
+} 
