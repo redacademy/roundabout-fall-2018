@@ -161,10 +161,6 @@ body:not(.post-type-archive-member){
                             }
                         }
 
-                        @include {
-                            
-                        }
-                    }
 
                     .info {
                         color: black;
@@ -207,6 +203,8 @@ body:not(.post-type-archive-member){
         .copyright-container {
             font-size: 5px;
             text-align: center;
+                }
+            }
         }
     }
 }
