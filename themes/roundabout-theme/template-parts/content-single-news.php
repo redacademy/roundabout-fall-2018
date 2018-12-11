@@ -9,20 +9,25 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="news-tags">
-			<?php echo the_tags('<button>', '</button><button>', '</button>') ;?>
+		<div class="title-tags">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</div>
+
 	</header><!-- .entry-header -->
 
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
+
+
+		<div class="news-tags">
+			<?php echo the_tags('<button>', '</button><button>', '</button>') ;?>
+		</div>
 
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>
