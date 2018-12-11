@@ -14,6 +14,11 @@ header.site-header {
             padding: 0;
             margin-top: 5%;
             word-spacing: 100vw;
+            line-height: 37px;
+
+            @include minimum-width {
+                font-size: 1.9rem;
+            }
         }
     }
 }
@@ -81,125 +86,6 @@ body.home{
 
 
 
-/* Footer */
-
-.site-footer {
-    padding: 25px 0 0 18px;
-    
-        .footer-container {
-            display: flex;
-            margin-left: 18px;
-            
-            @include desktop {
-                margin-left: 146px;
-            }
-        }
-        
-            .content {
-                width: 100px;
-
-                @include desktop {
-                    width: initial;
-                }
-
-                .widget-container {
-                    display: inline-block;
-                    
-                    ul {
-                        margin: 0;
-                        padding: 0;
-
-                        @include desktop {
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            grid-template-rows: 1fr 1fr 1fr 1fr;
-                        }
-                    }
-
-                    li {
-                        list-style-type: none;
-                        font-size: 11px;
-                        line-height: 1.8;
-
-                        @include desktop {
-                            font-size: 15px;
-
-                            &:nth-child(1) {
-                                grid-row-start: 1;
-                                grid-column-start: 2;
-                            }
-
-                            &:nth-child(2) {
-                                grid-column-start: 2;
-                                grid-row-start: 2;
-                            }
-                            
-                            &:nth-child(3) {
-                                grid-row-start: 1;
-                                grid-column-start: 1;
-                            }
-
-                            &:nth-child(4) {
-                                grid-row-start: 2;
-                                grid-column-start: 1;
-                            }
-
-                            &:nth-child(5) {
-                                grid-row-start: 3;
-                                grid-column-start: 1;
-                            }
-
-                            &:nth-child(6) {
-                                grid-row-start: 4;
-                                grid-column-start: 1;
-                            }
-                        }
-                    }
-
-                    .info {
-                        color: black;
-                        margin: 0;
-
-                        a {
-                            color: black;
-                            text-decoration: underline;
-                        }
-                    }
-                }
-            }
-
-        .images-widget {
-            display: inline-flex;
-            align-items: flex-end;
-
-            @include desktop {
-                align-items: flex-start;
-                margin-left: 30px;
-            }
-
-                img {
-                    margin: 1px;
-                    border: 0.5px solid black;
-                }
-
-                .badth-logo {
-                    height: 38px;
-                    width: 81px;
-                }
-
-                .hcpc-logo {
-                    height: 38px;
-                    width: 37px;
-                }
-        }
-    .site-info {
-
-        .copyright-container {
-            font-size: 5px;
-            text-align: center;
-        }
-    }
-}
 
 
 /* Blog */
