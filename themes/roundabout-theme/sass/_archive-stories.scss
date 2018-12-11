@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 
-.post-type-archive-stories {
+.post-type-archive-stories, .post-type-archive-news {
 	.site-main {
 		position: relative;
 
@@ -42,6 +42,7 @@
 			display: grid;
 			grid-gap: 3rem;
 			grid-template-columns: 45% 45%;
+			padding-bottom: 4rem;
 		}	
 		.stories-container {
 			.entry-header {
@@ -57,6 +58,19 @@
 				padding-bottom: 0rem;
 				}
 			}
-		}	
+		}
 	}
+}
+
+.post-type-archive-news {
+	.type-news {
+		margin-top: 3.5rem;
+
+		.entry-title {
+			margin: 1rem 0 0;
+			}
+		.entry-header {
+			margin-bottom: -0.5rem;
+		}
+	}	
 }
