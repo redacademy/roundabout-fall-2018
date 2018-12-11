@@ -20,7 +20,7 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <!-- Calling team member part -->
-<?php //declare $terms for product slugs
+<?php //declare $terms for members slugs
 $terms = get_terms( array(
 	'taxonomy' => 'member-type',
 	'hide_empty' => false,
@@ -32,7 +32,7 @@ $terms = get_terms( array(
 <!-- // the query -->
 <?php $members = new WP_Query(array('post_type'=>'member', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
 
-<div id="primary" class="post-type-archive-member">
+<div id="primary" class="post-type-archive">
 	<main id="main" class="site-main" role="main">
 
 		<header class="page-header">
