@@ -14,6 +14,11 @@ header.site-header {
             padding: 0;
             margin-top: 5%;
             word-spacing: 100vw;
+            line-height: 37px;
+
+            //@include minimum-width {
+            //    font-size: 1.9rem;
+            //}
         }
     }
 }
@@ -81,47 +86,10 @@ body.home{
 
 
 
-/* Footer */
-
-.site-footer {
-    background-color: rgb(136, 86, 86);
-    
-    .site-info {
-        // background-color: black;
-
-        .contact-widget {
-
-            ul {
-                list-style: none;
-                padding-left: 0;
-
-                li {
-                    color: white;
-                    line-height: 32px;
-                    font-size: 0.875rem;
-                }
-            }
-        }
-
-        .images-widget {
-            display: flex;
-            width: 70%;
-            flex-wrap: wrap;
-
-                img {
-                    width: 109px;
-                    height: 52px;
-                }
-        }
-    }
-}
-
-
 /* Blog */
+
 header.entry-header{
     img {
         width: 100vw;
     }
 } 
-
-

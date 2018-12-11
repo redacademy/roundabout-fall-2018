@@ -143,6 +143,7 @@ function stories_init() {
     register_post_type( 'stories', $args );
 }
 add_action( 'init', 'stories_init' );
+
 /**
   * Create "Team Members" post type
 **/
@@ -197,7 +198,7 @@ function team_members() {
         'capability_type'       => 'page',
         'menu_icon'             => 'dashicons-welcome-learn-more',
 	);
-	register_post_type( 'Team Members', $args );
+	register_post_type( 'member', $args ); 
 
 }
 add_action( 'init', 'team_members', 0 );

@@ -19,8 +19,8 @@ get_header(); ?>
 
 			<article class="error-404 not-found">
 				<div class="entry-content">
-					<h1><?php echo esc_html( 'That page can&rsquo;t be found.' ); ?></h1>
-					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
+					<h1><?php echo esc_html( 'Sorry, this page can&rsquo;t be found.' ); ?></h1>
+					<p><?php echo esc_html( 'It looks like nothing was found at this location. What are you looking for?' ); ?></p>
 
 					<?php get_search_form(); ?>
 
