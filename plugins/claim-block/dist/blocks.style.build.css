@@ -14,20 +14,37 @@
   -ms-flex-item-align: center;
       align-self: center;
   width: 100%; }
+  .wp-block-cgb-block-claim-block p {
+    font-size: 20px; }
   .wp-block-cgb-block-claim-block .none {
-    border: 1px solid black; }
+    border: 1px solid black;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .wp-block-cgb-block-claim-block .none p {
+      padding: 2rem 2rem 2rem 0rem !important; }
     .wp-block-cgb-block-claim-block .none button, .wp-block-cgb-block-claim-block .none a.button {
+      -ms-flex-item-align: center;
+          align-self: center;
       display: block;
-      text-decoration: none;
-      background-color: #aee34d; }
-      .wp-block-cgb-block-claim-block .none button:hover, .wp-block-cgb-block-claim-block .none a.button:hover {
-        background-color: #9adb22; }
+      text-decoration: none; }
       .wp-block-cgb-block-claim-block .none button .components-base-control__field, .wp-block-cgb-block-claim-block .none a.button .components-base-control__field {
         margin: 8px; }
+    @media (min-width: 1080px) {
+      .wp-block-cgb-block-claim-block .none p {
+        margin: 0 auto !important; } }
   .wp-block-cgb-block-claim-block .round {
     border: 1px solid #aee34d;
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat; }
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+    background-size: 160px 160px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
     .wp-block-cgb-block-claim-block .round button, .wp-block-cgb-block-claim-block .round a.button {
+      -ms-flex-item-align: center;
+          align-self: center;
       display: block;
       text-decoration: none;
       background-color: #aee34d; }
@@ -37,8 +54,15 @@
         margin: 8px; }
   .wp-block-cgb-block-claim-block .heart {
     border: 1px solid #ff5182;
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat; }
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+    background-size: 160px 160px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
     .wp-block-cgb-block-claim-block .heart button, .wp-block-cgb-block-claim-block .heart a.button {
+      -ms-flex-item-align: center;
+          align-self: center;
       display: block;
       text-decoration: none;
       background-color: #ff5182; }
@@ -46,6 +70,9 @@
         background-color: #ff1e5d; }
     .wp-block-cgb-block-claim-block .heart .components-base-control__field {
       margin: 8px; }
+  @media (min-width: 620px) {
+    .wp-block-cgb-block-claim-block p {
+      font-size: 30px; } }
   .wp-block-cgb-block-claim-block p {
     margin: 0 auto !important;
     padding: 3rem 4rem 4rem 8rem !important; }
@@ -53,4 +80,6 @@
     .wp-block-cgb-block-claim-block {
       width: 60% !important; }
       .wp-block-cgb-block-claim-block p {
-        padding: 3rem 2rem 4rem 2rem !important; } }
+        max-width: 75% !important;
+        margin: 10% 0 0 20% !important;
+        padding: 3rem 0 3rem 0 !important; } }

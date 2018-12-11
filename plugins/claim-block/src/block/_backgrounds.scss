@@ -1,54 +1,3 @@
-@mixin backgrounds() {
-  .none {
-    border: 1px solid black;
-
-    button, a.button {
-      display: block;
-      text-decoration: none;
-      background-color: #aee34d;
-      &:hover {
-        background-color: darken(#aee34d, 10%);
-      }
-
-      .components-base-control__field {
-        margin: 8px;
-      }
-    }
-  }
-  .round {
-    border: 1px solid #aee34d;
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
-
-    button, a.button {
-      display: block;
-      text-decoration: none;
-      background-color: #aee34d;
-      &:hover {
-        background-color: darken(#aee34d, 10%);
-      }
-      .components-base-control__field {
-        margin: 8px;
-      }
-    }
-  }
-  .heart {
-    border: 1px solid #ff5182;
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
-
-    button, a.button {
-      display: block;
-      text-decoration: none;
-      background-color: #ff5182;
-      &:hover {
-        background-color: darken(#ff5182, 10%);
-      }
-    }
-    .components-base-control__field {
-      margin: 8px;
-    }
-  }
-}
-
 //@queries
 $tablet-width: 620px;
 $desktop-width: 1080px;
@@ -62,5 +11,84 @@ $desktop-width: 1080px;
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;
+  }
+}
+
+@mixin backgrounds() {
+
+  p {
+    font-size: 20px;
+  }
+  .none {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding: 2rem 2rem 2rem 0rem !important;
+    }
+
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+
+      .components-base-control__field {
+        margin: 8px;
+      }
+    }
+    @include desktop {
+      p {
+        margin: 0 auto !important;
+      }
+    }
+  }
+
+  .round {
+    border: 1px solid #aee34d;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+    background-size: 160px 160px;
+    display: flex;
+    flex-direction: column;
+
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+      background-color: #aee34d;
+      &:hover {
+        background-color: darken(#aee34d, 10%);
+      }
+      .components-base-control__field {
+        margin: 8px;
+      }
+    }
+  }
+
+  .heart {
+    border: 1px solid #ff5182;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+    background-size: 160px 160px;
+    display: flex;
+    flex-direction: column;
+
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+      background-color: #ff5182;
+      &:hover {
+        background-color: darken(#ff5182, 10%);
+      }
+    }
+    .components-base-control__field {
+      margin: 8px;
+    }
+  }
+
+  @include tablet {
+    p {
+      font-size: 30px;
+    }
   }
 }
