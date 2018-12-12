@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 /* Header */
-
+//Tagline sentence
 header.site-header {
     display: flex;
     flex-direction: column-reverse;
@@ -77,14 +77,12 @@ body.home{
     }
 }
 
-/* Front page */
-
-
 
 /* Blog */
-
-header.entry-header{
-    img {
-        width: 100vw;
-    }
-} 
+body:not(.post-type-archive-member):not(.member-template-default):not(.supporter-template-default ) {
+    header.entry-header{
+        img {
+            width: 100vw;
+        }
+    } 
+}
