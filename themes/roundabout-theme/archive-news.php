@@ -18,7 +18,7 @@ get_header(); ?>
 
 
 			<?php /* Start the Loop */ ?>
-		<div class="stories-wrapper">
+		<div class="stories-wrapper hidden">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -32,6 +32,9 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
+		</div>
+		<div class="button-content">
+			<button class="load-button">Load More</button>
 		</div>
 
 		</main><!-- #main -->

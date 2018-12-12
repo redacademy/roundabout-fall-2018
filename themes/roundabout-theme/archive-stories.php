@@ -37,7 +37,7 @@ $stories = new WP_Query($args);
 		<?php if ( have_posts() ) : ?>
 	
 			<?php /* Start the Loop */ ?>
-			<div class="stories-wrapper">
+			<div class="stories-wrapper hidden">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="stories-container">
 						<?php
@@ -53,6 +53,9 @@ $stories = new WP_Query($args);
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
+			</div>
+			<div class="button-content">
+				<button class="load-button">Load More</button>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

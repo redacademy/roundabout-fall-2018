@@ -26,7 +26,19 @@
 		.entry-header {
 			margin-bottom: 2rem;
 			}
+		.button-content {
+			display: flex;
+			justify-content: center;
+			padding-left: 50px;
+			@include tablet {
+				padding-left: 100px;
+			}
+			.load-button {
+				padding: 0.6rem 4rem;
+				margin-bottom: 4rem;
+			}
 		}
+	}
 	.quote-content {
 		margin-bottom: -20px;
 		.quote {
@@ -34,6 +46,10 @@
 			@include content-margin;
 		}
 	}
+
+	.stories-wrapper.hidden .stories-container:nth-child(n+5) {
+		display: none;
+	  	}
 
 	.stories-wrapper {
 		margin-left: 15%;
@@ -44,7 +60,9 @@
 			grid-template-columns: 45% 45%;
 			padding-bottom: 4rem;
 		}	
+
 		.stories-container {
+
 			.entry-header {
 				h2 {
 					font-size: 1.5rem;
@@ -76,8 +94,11 @@
 		.entry-header {
 			margin-bottom: -0.5rem;
 		}
-	}	
-}
+	}
+	.stories-wrapper.hidden article:nth-child(n+5) {
+		display: none;
+	  	}
+	}
 
 /*--------------------------------------------------------------
 # Single NEWS Page
