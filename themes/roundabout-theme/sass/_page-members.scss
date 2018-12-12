@@ -128,25 +128,30 @@ body.page{
                                         // margin-left: 15%;
                                     }
                                 }
-                                img{
-                                    border-radius: 50%;
-                                    max-width: 268px;
-                                    height: auto;
-                                    max-height: 268px;
-                                    max-height: auto;
-                                    /* display: block; */   
-                                    /* margin-left: auto; */
-                                    /* margin-right: auto; */
-                                    // border-radius: 230px;
-                                    // max-width: 100%;
-                                    // width: auto;
-                                    // max-height: 268px;
-                                    @include center-block;
+                                figure{
+                                    img{
+                                        border-radius: 50%;
+                                        height: auto;
+                                        width: auto;
+                                        max-width: 268px;
+                                        max-height: auto;
+                                        
+                                        
+                                        /* display: block; */   
+                                        /* margin-left: auto; */
+                                        /* margin-right: auto; */
+                                        // border-radius: 230px;
+                                        // max-width: 100%;
+                                        // width: auto;
+                                        // max-height: 268px;
+                                        @include center-block;
 
-                                    @include desktop{
-                                        margin-left: 15%;
+                                        @include desktop{
+                                            margin-left: 15%;
+                                        }
                                     }
                                 }
+                                
                                 .entry-title{
                                     align-self: flex-end;
                                     margin-left: 1rem;
