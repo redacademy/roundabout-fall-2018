@@ -5,7 +5,6 @@
 /* Links */
 
 a {
-	color: $color__link;
 	text-decoration: none;
 
 	&:visited {
@@ -37,8 +36,8 @@ a {
 	ul {
 		display: none;
 		list-style: none;
-		margin: 0;
-		padding-left: 0;
+		// margin: 0;
+		// padding-left: 0;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -130,5 +129,118 @@ a {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+/* My styling */
+
+.roundabout-logo {
+	width: 30px;
+	height: 30px;
+}
+
+.main-navigation {
+	@include desktop {
+		display: none;
+	}
+
+	.nav-menu {
+		display: grid;
+		margin: 20px;
+		padding: 0;
+		grid-template-columns: auto;
+		grid-template-rows: 1fr;
+	
+		button {
+			background-color: initial;
+		}
+
+		li {
+			color:white;
+
+			&:nth-child(2) {
+				cursor: pointer;
+			}
+
+			&:nth-child(3) {
+				grid-column-start: 8;
+				display: flex;
+				justify-content: flex-end;
+				cursor: pointer;
+			}
+		}
+	}
+	.menu-menu-1-container {
+		background-color: red;
+
+		ul {
+			background-color: black;
+			width: 90px;
+
+			li {
+				color: black;
+			}
+		}
+	}
+
+	i {
+		font-size: 30px;
+	}
+
+	a {
+		// line-height: 0;
+	}
+}
+
+.desktop-nav {
+	// display: none;
+	@include desktop {
+		display: flex;
+
+		nav {
+			background-color: black;
+			padding: 10px 0;
+		}
+		  
+		  ul {
+				display: flex;
+				justify-content: space-around;
+				flex-flow: row wrap;
+		  }
+		  
+		  a {
+				color: #FFFFFF;
+				font-family: "Martel Sans";
+				font-size: 20px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				line-height: 36px;
+				text-decoration: none;
+				transition: 0.1s ease-in;
+		  }
+		  
+		  a:hover {
+				border-bottom: 6px solid white;
+		  }
+		  
+		  .fa-search {
+				background-color: white;
+		  }
+		  
+		  .page-container {
+				background-color: #8285b0;
+				width: 100vw;
+				height: 100vh;
+		  }
+		  
+		  .burger-container {
+				background-color: black;
+		  }
+		  
+		  .fa-bars {
+				margin: 100px;
+				font-size: 50px;
+				ursor: pointer;
+		  }
 	}
 }
