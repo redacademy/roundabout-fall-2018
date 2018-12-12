@@ -1,9 +1,9 @@
 /*--------------------------------------------------------------
-# Archive Stories Page
+# Archive and Single STORIES Page
 --------------------------------------------------------------*/
 
 
-.post-type-archive-stories {
+.post-type-archive-stories, .post-type-archive-news {
 	.site-main {
 		position: relative;
 
@@ -42,6 +42,7 @@
 			display: grid;
 			grid-gap: 3rem;
 			grid-template-columns: 45% 45%;
+			padding-bottom: 4rem;
 		}	
 		.stories-container {
 			.entry-header {
@@ -57,6 +58,59 @@
 				padding-bottom: 0rem;
 				}
 			}
-		}	
+		}
 	}
 }
+
+/*--------------------------------------------------------------
+# Archive NEWS Page
+--------------------------------------------------------------*/
+
+.post-type-archive-news {
+	.type-news {
+		margin-top: 3.5rem;
+
+		.entry-title {
+			margin: 1rem 0 0;
+			}
+		.entry-header {
+			margin-bottom: -0.5rem;
+		}
+	}	
+}
+
+/*--------------------------------------------------------------
+# Single NEWS Page
+--------------------------------------------------------------*/
+
+.single-news {
+
+	.news-tags {
+		margin-left: 17%;
+		display: flex;
+		flex-direction: column;
+
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+		}	
+
+		button {
+			width: 120px;
+			margin: 5px;
+			@include tablet {
+				width: 120px;
+			}
+			@include desktop {
+				width: 15%;
+			}
+			a {
+				color: #fff;
+				font-size: 0.8rem;
+				}
+			}
+		}
+	}
+
