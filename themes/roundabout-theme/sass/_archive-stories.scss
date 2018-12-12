@@ -95,12 +95,13 @@
 			flex-direction: row;
 			justify-content: flex-start;
 			align-items: center;
+		}	
 
 		button {
-			width: 40%;
+			width: 120px;
 			margin: 5px;
 			@include tablet {
-				width: 18%;
+				width: 120px;
 			}
 			@include desktop {
 				width: 15%;
@@ -112,4 +113,4 @@
 			}
 		}
 	}
-}
+
