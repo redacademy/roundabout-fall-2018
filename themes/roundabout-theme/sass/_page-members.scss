@@ -129,10 +129,18 @@ body.page{
                                     }
                                 }
                                 img{
-                                    border-radius: 230px;
-                                    max-width: 100%;
-                                    width: auto;
+                                    border-radius: 50%;
+                                    max-width: 268px;
+                                    height: auto;
                                     max-height: 268px;
+                                    max-height: auto;
+                                    /* display: block; */   
+                                    /* margin-left: auto; */
+                                    /* margin-right: auto; */
+                                    // border-radius: 230px;
+                                    // max-width: 100%;
+                                    // width: auto;
+                                    // max-height: 268px;
                                     @include center-block;
 
                                     @include desktop{
@@ -194,6 +202,22 @@ body.page{
                     }
                 }
             }
+        }
+    }
+}
+//single pages default
+body.post-type-archive-member.single, body.member-template-default.single, body.supporter-template-default.single {
+    .entry-header{
+        img{
+            @include content-margin;
+            width: auto;
+        }
+    }
+    .entry-content{
+        @include content-margin;
+        ul{
+            margin: 0;
+            padding: 0;
         }
     }
 }

@@ -10,9 +10,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="inner">
 		<header class="entry-header">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail( 'large' ); ?>
-			<?php endif; ?>
+			<figure>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( 'large' ); ?>
+				<?php endif; ?>
+			</figure>
 
 			<h2 class="entry-title"><?php the_title() ?></h2>
 
