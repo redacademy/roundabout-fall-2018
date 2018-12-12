@@ -121,7 +121,7 @@ require get_template_directory() . '/inc/extras.php';
 
 function split_to_sections($content) {
 	$pagename = get_the_title();
-	if($pagename != 'Our services') {
+	if($pagename != 'Our services' && $pagename !='About') {
 		return $content;
 	}
 
