@@ -1,0 +1,81 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-cgb-block-claim-block {
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem; }
+
+div p {
+  font-size: 20px; }
+
+div .none {
+  border: 1px solid black;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  div .none p {
+    padding: 2rem 2rem 2rem 0rem !important; }
+  div .none button, div .none a.button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: block;
+    text-decoration: none; }
+    div .none button .components-base-control__field, div .none a.button .components-base-control__field {
+      margin: 8px; }
+  @media (min-width: 1080px) {
+    div .none p {
+      margin: 0 auto !important; } }
+
+div .round {
+  border: 1px solid #aee34d;
+  background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+  background-size: 160px 160px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  div .round button, div .round a.button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: block;
+    text-decoration: none;
+    background-color: #aee34d; }
+    div .round button:hover, div .round a.button:hover {
+      background-color: #9adb22; }
+    div .round button .components-base-control__field, div .round a.button .components-base-control__field {
+      margin: 8px; }
+
+div .heart {
+  border: 1px solid #ff5182;
+  background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+  background-size: 160px 160px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  div .heart button, div .heart a.button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: block;
+    text-decoration: none;
+    background-color: #ff5182; }
+    div .heart button:hover, div .heart a.button:hover {
+      background-color: #ff1e5d; }
+  div .heart .components-base-control__field {
+    margin: 8px; }
+
+@media (min-width: 620px) {
+  div p {
+    font-size: 30px; } }
