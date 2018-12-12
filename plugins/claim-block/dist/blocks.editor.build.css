@@ -25,8 +25,6 @@ div .none {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  div .none p {
-    padding: 2rem 2rem 2rem 0rem !important; }
   div .none button, div .none a.button {
     -ms-flex-item-align: center;
         align-self: center;
@@ -34,18 +32,29 @@ div .none {
     text-decoration: none; }
     div .none button .components-base-control__field, div .none a.button .components-base-control__field {
       margin: 8px; }
-  @media (min-width: 1080px) {
-    div .none p {
-      margin: 0 auto !important; } }
 
 div .round {
+  position: relative;
   border: 1px solid #aee34d;
-  background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
-  background-size: 160px 160px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
+  div .round::before {
+    width: 100px;
+    height: 100px;
+    content: '';
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+    background-size: 100px 100px;
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    left: -30px; }
+  div .round p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
   div .round button, div .round a.button {
     -ms-flex-item-align: center;
         align-self: center;
@@ -56,15 +65,44 @@ div .round {
       background-color: #9adb22; }
     div .round button .components-base-control__field, div .round a.button .components-base-control__field {
       margin: 8px; }
+  @media (min-width: 620px) {
+    div .round::before {
+      margin-top: 10%;
+      width: 130px;
+      height: 130px;
+      background-size: 130px 130px;
+      top: -70px;
+      left: -30px; } }
+  @media (min-width: 1080px) {
+    div .round::before {
+      width: 160px;
+      height: 160px;
+      background-size: 160px 160px;
+      top: -95px;
+      left: -75px; } }
 
 div .heart {
+  position: relative;
   border: 1px solid #ff5182;
-  background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
-  background-size: 160px 160px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
+  div .heart::before {
+    width: 100px;
+    height: 100px;
+    content: '';
+    background-size: 100px 100px;
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    left: -30px;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat; }
+  div .heart p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
   div .heart button, div .heart a.button {
     -ms-flex-item-align: center;
         align-self: center;
@@ -74,6 +112,58 @@ div .heart {
     div .heart button:hover, div .heart a.button:hover {
       background-color: #ff1e5d; }
   div .heart .components-base-control__field {
+    margin: 8px; }
+  @media (min-width: 620px) {
+    div .heart::before {
+      margin-top: 10%;
+      width: 130px;
+      height: 130px;
+      background-size: 130px 130px;
+      top: -70px;
+      left: -30px; } }
+  @media (min-width: 1080px) {
+    div .heart::before {
+      width: 160px;
+      height: 160px;
+      background-size: 160px 160px;
+      top: -95px;
+      left: -75px; } }
+
+div .number {
+  position: relative;
+  border: 1px solid blue;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-top: 10%; }
+  div .number::before {
+    position: absolute;
+    content: "80+";
+    font-size: 100px;
+    font-weight: 700;
+    color: #aee34d;
+    z-index: 0;
+    top: -70px;
+    left: -35px; }
+    @media (min-width: 1080px) {
+      div .number::before {
+        font-size: 160px;
+        top: -130px; } }
+  div .number p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
+  div .number button, div .number a.button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: block;
+    text-decoration: none;
+    background-color: #aee34d; }
+    div .number button:hover, div .number a.button:hover {
+      background-color: #9adb22; }
+  div .number .components-base-control__field {
     margin: 8px; }
 
 @media (min-width: 620px) {

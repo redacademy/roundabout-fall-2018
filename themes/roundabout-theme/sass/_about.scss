@@ -19,9 +19,10 @@
           margin-left: 0;
         }
 
+
         @include desktop {
           align-items: flex-end;
-          background-position: 5% 40%;
+          background-position: 5% 30%;
           h2 {
             margin-top: 0;
             align-self: center;
@@ -63,6 +64,10 @@
             padding-right: 0;
           }
         }
+      }
+
+      h1 {
+        margin-left: 0 !important;
       }
     }
   }

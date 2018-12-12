@@ -24,10 +24,6 @@ $desktop-width: 1080px;
     display: flex;
     flex-direction: column;
 
-    p {
-      padding: 2rem 2rem 2rem 0rem !important;
-    }
-
     button, a.button {
       align-self: center;
       display: block;
@@ -37,19 +33,32 @@ $desktop-width: 1080px;
         margin: 8px;
       }
     }
-    @include desktop {
-      p {
-        margin: 0 auto !important;
-      }
-    }
   }
 
   .round {
+    &::before {
+      width: 100px;
+      height: 100px;
+      content: '';
+      background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+      background-size: 100px 100px;
+      position: absolute;
+      z-index: 0;
+      top: -30px;
+      left: -30px;
+    }
+
+    position: relative;
     border: 1px solid #aee34d;
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
-    background-size: 160px 160px;
     display: flex;
     flex-direction: column;
+
+    p {
+      z-index: 1;
+      margin-top: 10% !important;
+      margin-left: 5% !important;
+      padding: 0 !important;
+    }
 
     button, a.button {
       align-self: center;
@@ -63,14 +72,53 @@ $desktop-width: 1080px;
         margin: 8px;
       }
     }
+
+    @include tablet {
+      &::before {
+        margin-top: 10%;
+        width: 130px;
+        height: 130px;
+        background-size: 130px 130px;
+        top: -70px;
+        left: -30px;
+      }
+    }
+
+    @include desktop {
+      &::before {
+        width: 160px;
+        height: 160px;
+        background-size: 160px 160px;
+        top: -95px;
+        left: -75px;
+      }
+    }
   }
 
   .heart {
+    &::before {
+      width: 100px;
+      height: 100px;
+      content: '';
+      background-size: 100px 100px;
+      position: absolute;
+      z-index: 0;
+      top: -30px;
+      left: -30px;
+      background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+    }
+
+    position: relative;
     border: 1px solid #ff5182;
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
-    background-size: 160px 160px;
     display: flex;
     flex-direction: column;
+
+    p {
+      z-index: 1;
+      margin-top: 10% !important;
+      margin-left: 5% !important;
+      padding: 0 !important;
+    }
 
     button, a.button {
       align-self: center;
@@ -79,6 +127,71 @@ $desktop-width: 1080px;
       background-color: #ff5182;
       &:hover {
         background-color: darken(#ff5182, 10%);
+      }
+    }
+    .components-base-control__field {
+      margin: 8px;
+    }
+
+    @include tablet {
+      &::before {
+        margin-top: 10%;
+        width: 130px;
+        height: 130px;
+        background-size: 130px 130px;
+        top: -70px;
+        left: -30px;
+      }
+    }
+
+    @include desktop {
+      &::before {
+        width: 160px;
+        height: 160px;
+        background-size: 160px 160px;
+        top: -95px;
+        left: -75px;
+      }
+    }
+  }
+
+  .number {
+    &::before  {
+      position: absolute;
+      content:"80+";
+      font-size: 100px;
+      font-weight: 700;
+      color: #aee34d;
+      z-index: 0;
+      top: -70px;
+      left: -35px;
+
+      @include desktop {
+        font-size: 160px;
+        top: -130px;
+      }
+    }
+
+    position: relative;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+
+    p {
+      z-index: 1;
+      margin-top: 10% !important;
+      margin-left: 5% !important;
+      padding: 0 !important;
+    }
+
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+      background-color: #aee34d;
+      &:hover {
+        background-color: darken(#aee34d, 10%);
       }
     }
     .components-base-control__field {
