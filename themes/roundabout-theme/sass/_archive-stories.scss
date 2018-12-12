@@ -4,6 +4,7 @@
 
 
 .post-type-archive-stories, .post-type-archive-news {
+
 	.site-main {
 		position: relative;
 
@@ -36,6 +37,12 @@
 			.load-button {
 				padding: 0.6rem 4rem;
 				margin-bottom: 4rem;
+			}
+		}
+		button.load-button {
+			background-color: $main_green;
+			&:hover {
+				background-color: $hover_green;
 			}
 		}
 	}
@@ -85,6 +92,7 @@
 --------------------------------------------------------------*/
 
 .post-type-archive-news {
+
 	.type-news {
 		margin-top: 3.5rem;
 
