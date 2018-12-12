@@ -201,17 +201,30 @@ body.page{
 }
 //single pages default
 body.post-type-archive-member.single, body.member-template-default.single, body.supporter-template-default.single {
-    .entry-header{
-        img{
+    article{
+        .entry-header{
+            img{
+                @include content-margin;
+                width: auto;
+            }
+        }
+        .entry-content{
             @include content-margin;
-            width: auto;
+            ul, p{
+                margin: 0;
+                padding: 0;
+            }
         }
     }
-    .entry-content{
-        @include content-margin;
-        ul{
-            margin: 0;
-            padding: 0;
+    .post-navigation{
+        margin: 2rem 2% 2rem 10%;
+        .nav-links a{
+            background-color: $main_green;
+            padding: 1rem;
+            display: inline-block;
+            &:hover{
+                background-color: $hover_green;
+            }
         }
     }
 }
