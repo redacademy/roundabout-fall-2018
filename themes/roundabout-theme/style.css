@@ -1059,7 +1059,7 @@ body.page .site-content .post-type-archive-member {
               top: 0;
               bottom: 0;
               display: inherit; }
-# 404 Page
+/* 404 Page
 --------------------------------------------------------------*/
 .error404 .page-title {
   font-family: Montserrat, sans-serif;
