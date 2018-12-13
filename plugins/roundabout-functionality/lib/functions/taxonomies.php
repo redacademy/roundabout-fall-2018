@@ -50,7 +50,8 @@ add_action( 'init', 'custom_taxonomy', 0 );
 
 
 
-// Register Custom Taxonomy for NEWS Page
+// Register Custom Taxonomy for Single NEWS Page Tags
+
 function news_taxonomy() {
 
 	$labels = array(
