@@ -2,6 +2,7 @@
   .entry-content {
     @include content-margin;
 
+    //@include two-image-page(("../../images/face-hands-2@3x.png"), ("../../images/two-faces-2@3x.png"));
     section {
       &:nth-child(1) {
         background: url("../../images/face-hands-2@3x.png") no-repeat;
@@ -14,21 +15,21 @@
           margin-top: 245px;
           margin-left: 0;
         }
+
         p {
           margin-left: 0;
+          margin-bottom: 10%;
         }
-
 
         @include desktop {
           align-items: flex-end;
-          background-position: 5%;
+          background-position: 5% 75px;
+
           h2 {
             margin-top: 0;
-            padding: 0;
           }
-
-          p {
-            max-width: 55%;
+          >p, >h2 {
+            width: 55%;
             padding-right: 0;
           }
         }
@@ -49,18 +50,19 @@
 
         p {
           margin-left: 0;
+          margin-bottom: 10%;
         }
-
 
         @include desktop {
           align-items: flex-start;
-          background-position: 95% 20%;
+          background-position: 95% 75px;
+
           h2 {
             margin-top: 0;
           }
 
-          p {
-            max-width: 55%;
+          >p, >h2 {
+            width: 55%;
             padding-right: 0;
           }
         }

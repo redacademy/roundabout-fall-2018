@@ -103,3 +103,52 @@ $desktop-width-1920: 1920px;
 		line-height: 1.67;
 	}
 }
+
+@mixin two-image-page($left-image, $right-image) {
+	display: flex;
+	flex-direction: column;
+	background-position: top;
+
+	>p {
+		margin-left: 0;
+	}
+	h2 {
+		margin-left: 0;
+	}
+
+	@include desktop {
+		h2 {
+			margin-top: 0;
+		}
+		>p, >h2 {
+			width: 55%;
+			padding-right: 0;
+		}
+	}
+
+	&:nth-child(1) {
+		background: url($left-image) no-repeat;
+		background-size: contain;
+
+		@include desktop {
+			align-items: flex-end;
+			background-position: 5% 20px;
+			background-size: 30%;
+		}
+	}
+
+	&:nth-child(2) {
+		margin-top: $base__space-unit * 3;
+		background: url($right-image) no-repeat;
+		background-size: contain;
+
+		@include desktop {
+			align-items: flex-start;
+			background-position: 95% 20px;
+			background-size: 30%;
+		}
+	}
+	.wp-block-cgb-block-claim-block {
+		width: 100vw;
+	}
+}

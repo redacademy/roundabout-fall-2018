@@ -2,6 +2,8 @@
   .entry-content {
     @include content-margin;
 
+    //@include two-image-page(("../../images/puppet-2@3x.png"), ("../../images/head-puddle-2@3x.png"));
+
     section {
       &:nth-child(1) {
         background: url("../../images/puppet-2@3x.png") no-repeat;
@@ -17,17 +19,20 @@
 
         p {
           margin-left: 0;
+          margin-bottom: 10%;
         }
+
 
         @include desktop {
           align-items: flex-end;
-          background-position: 5% 40%;
+          background-position: 5% 75px;
+
           h2 {
+            width: 55%;
             margin-top: 0;
-            align-self: center;
           }
 
-          p {
+          >p {
             max-width: 55%;
             padding-right: 0;
           }
@@ -49,20 +54,26 @@
 
         p {
           margin-left: 0;
+          margin-bottom: 10%;
         }
 
         @include desktop {
           align-items: flex-start;
-          background-position: 95% 20%;
+          background-position: 95% 75px;
+
           h2 {
             margin-top: 0;
           }
 
-          p {
-            max-width: 55%;
+          >p, >h2 {
+            width: 55%;
             padding-right: 0;
           }
         }
+      }
+
+      h1 {
+        margin-left: 0 !important;
       }
     }
   }
