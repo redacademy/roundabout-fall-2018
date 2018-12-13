@@ -50,8 +50,7 @@ add_action( 'init', 'custom_taxonomy', 0 );
 
 
 
-
-// Register Custom Taxonomy for Single NEWS Page Tags:
+// Register Custom Taxonomy for Single NEWS Page Tags
 
 function news_taxonomy() {
 
@@ -59,17 +58,6 @@ function news_taxonomy() {
 		'name'                       => _x( 'News Tags', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'News Tag', 'Taxonomy Singular Name', 'text_domain' ),
 		'menu_name'                  => __( 'News Tags', 'text_domain' ),
-
-/**
-  * Create "Supporters Members" taxonomies
-**/
-function custom_supporters_taxonomy() {
-
-	$labelsSupporters = array(
-		'name'                       => _x( 'Supporters Members Types', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Supporter Member Type', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Member Type', 'text_domain' ),
-
 		'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
@@ -88,22 +76,15 @@ function custom_supporters_taxonomy() {
 		'items_list'                 => __( 'Items list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
 	);
-
 	$args = array(
 		'labels'                     => $labels,
 		'hierarchical'               => false,
-
-	$argsSupporters = array(
-		'labels'                     => $labelsSupporters,
-		'hierarchical'               => true,
-
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-
 	register_taxonomy( 'news-tags', array( 'news' ), $args );
 
 }
@@ -151,9 +132,3 @@ function featured_taxonomy() {
 
 }
 add_action( 'init', 'featured_taxonomy', 0 );
-
-	register_taxonomy( 'supporters-type', array( 'supporter' ), $argsSupporters );
-//same name to register_taxonomy
-}
-add_action( 'init', 'custom_supporters_taxonomy', 0 );
-
