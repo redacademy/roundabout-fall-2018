@@ -45,6 +45,7 @@ function news_init() {
 	    'description' => __( 'News information pages.', 'text_domain' ),
         'labels' => $labelsnews,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
+		'taxonomies' => array( 'post_tag' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -115,6 +116,7 @@ function stories_init() {
 	    'description' => __( 'Stories information pages.', 'text_domain' ),
         'labels' => $labelsstories,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
+		'taxonomies' => array( 'categories','post_tag' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -127,7 +129,7 @@ function stories_init() {
         'publicly_queryable' => true,
         'capability_type' => 'post',
         'show_in_rest' => true, // needed for Gutenberg to work!
-        'template_lock' => 'insert', // or 'insert' to allow moving blocks
+        'template_lock' => 'all', // or 'insert' to allow moving blocks
         'hierarchical' => false,
         'query_var' => true,
         'menu_icon' => 'dashicons-book',
@@ -193,8 +195,7 @@ function team_members() {
 		'can_export'            => true,
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
-        'publicly_queryable'    => true,
-        'show_in_rest' => true, // needed for Gutenberg to work!
+		'publicly_queryable'    => true,
         'capability_type'       => 'page',
         'menu_icon'             => 'dashicons-welcome-learn-more',
 	);

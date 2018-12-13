@@ -90,7 +90,6 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'profiles', get_template_directory_uri() . '/build/js/profiles.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'load-content', get_template_directory_uri() . '/build/js/load-content.min.js', array(), '20151215', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -231,6 +230,3 @@ function recent_posts($no_posts = 1, $excerpts = true) {
  
 	echo $output;
  }
-
-
-
