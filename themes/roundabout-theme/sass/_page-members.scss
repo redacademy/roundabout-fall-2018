@@ -1,13 +1,13 @@
 /*--------------------------------------------------------------
-# Page Team Members
+# Page Team and Support Members
 --------------------------------------------------------------*/
 
-/* Team Members */
+/* Team and Support Members */
 
 
 body.page{
     .site-content{
-        .post-type-archive-member{
+        .post-type-archive{
             margin-top: 0;
 
             .site-main {
@@ -25,7 +25,6 @@ body.page{
                     z-index: -1;
                 }
                 .page-header{
-                    // flex-basis: 100%;
                     @include content-margin;
                     ul{
                         margin-left: 0;
@@ -36,7 +35,6 @@ body.page{
                                 display: inline-block;   
                                 width: 48%;
                                 p{
-                                    // font-size: 16px;
                                     a{
                                     margin-right: 1rem;
                                     font-size: 16px;
@@ -47,7 +45,6 @@ body.page{
                                 display: inline-block;  
                                 width: auto; 
                                 p{
-                                    // font-size: 18px;
                                     a{
                                     margin-right: 2rem;
                                     } 
@@ -56,7 +53,6 @@ body.page{
                             p{
                                 position: relative;
                                 a{
-                                    // font-size: 18px;
                                     letter-spacing: .5px;
                                     font-weight: 500;
                                     text-decoration: none;
@@ -112,7 +108,6 @@ body.page{
                             height: 100%;
                             transition: transform 0.6s;
                             transform-style: preserve-3d;
-                            // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
                             
                             .entry-header{
                                 padding: 1rem;
@@ -134,10 +129,18 @@ body.page{
                                     }
                                 }
                                 img{
-                                    border-radius: 230px;
-                                    max-width: 100%;
-                                    width: auto;
+                                    border-radius: 50%;
+                                    max-width: 268px;
+                                    height: auto;
                                     max-height: 268px;
+                                    max-height: auto;
+                                    /* display: block; */   
+                                    /* margin-left: auto; */
+                                    /* margin-right: auto; */
+                                    // border-radius: 230px;
+                                    // max-width: 100%;
+                                    // width: auto;
+                                    // max-height: 268px;
                                     @include center-block;
 
                                     @include desktop{
@@ -199,6 +202,22 @@ body.page{
                     }
                 }
             }
+        }
+    }
+}
+//single pages default
+body.post-type-archive-member.single, body.member-template-default.single, body.supporter-template-default.single {
+    .entry-header{
+        img{
+            @include content-margin;
+            width: auto;
+        }
+    }
+    .entry-content{
+        @include content-margin;
+        ul{
+            margin: 0;
+            padding: 0;
         }
     }
 }

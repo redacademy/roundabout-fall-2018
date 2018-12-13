@@ -20,7 +20,7 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <!-- Calling team member part -->
-<?php //declare $terms for product slugs
+<?php //declare $terms for members slugs
 $terms = get_terms( array(
 	'taxonomy' => 'member-type',
 	'hide_empty' => false,
