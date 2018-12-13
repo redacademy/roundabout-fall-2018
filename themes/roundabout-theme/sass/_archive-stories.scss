@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 
-.post-type-archive-stories, .post-type-archive-news {
+.post-type-archive-stories, .post-type-archive-news, .tax-news-tags {
 	.site-main {
 		position: relative;
 
@@ -127,7 +127,12 @@
 
 		button {
 			width: 120px;
+			height: 35px;
 			margin: 5px;
+			background-color: $main_green;
+			&:hover {
+				background-color: $hover_green;
+			}
 			@include tablet {
 				width: 120px;
 			}
