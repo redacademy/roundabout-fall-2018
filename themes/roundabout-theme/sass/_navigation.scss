@@ -103,7 +103,15 @@ a {
 	display: block;
 }
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-width: 768px) {
+// 	.menu-toggle {
+// 		display: none;
+// 	}
+// 	.main-navigation ul {
+// 		display: block;
+// 	}
+// }
+@include desktop{
 	.menu-toggle {
 		display: none;
 	}

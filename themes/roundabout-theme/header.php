@@ -27,9 +27,36 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( '' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
+
+				<a class="roundabout-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/roundabout-logo.svg" alt=""></a>
+
+				<!-- <li class="search-menu search-menu default"><a title="" href="#"></a> -->
+				<form role="search" method="get" class="search-form" action="<?php get_search_query() ?>">
+					<fieldset>
+						<label>
+							<input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title="Search for:">
+
+
+							<span class="icon-search" aria-hidden="true">
+								<i class="fa fa-search"></i>
+							</span>
+						</label>
+						<button class="search-submit">
+							<span class="icon-search" aria-hidden="true">
+								<i class="fa fa-search"></i>
+							</span>
+							<span class="screen-reader-text">Search</span>
+						</button>
+					</fieldset>
+				</form>
+				<!-- </li> -->
+
+				<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+
+
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
