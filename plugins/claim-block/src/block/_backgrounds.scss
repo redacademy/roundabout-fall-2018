@@ -58,6 +58,7 @@
 
   display: flex;
   flex-direction: column;
+  position: relative;
 
   >p {
     z-index: 1;
@@ -95,18 +96,16 @@
   .round {
     @include image-background("oval-team");
     @include claim-block(#aee34d);
-    position: relative;
+
   }
 
   .heart {
     @include image-background("heart");
     @include claim-block(#ff5182);
-    position: relative;
   }
 
   .number {
     @include claim-block(#aee34d);
-    position: relative;
 
     &::before  {
       white-space: nowrap;

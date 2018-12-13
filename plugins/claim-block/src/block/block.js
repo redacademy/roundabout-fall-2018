@@ -61,6 +61,7 @@ registerBlockType( 'cgb/block-claim-block', {
 
         },
         background: {
+            default: 'none',
             type: 'string',
             source: 'attribute',
             selector: 'div[data-background]',

@@ -14,7 +14,9 @@
   color: #292929;
   margin: 0 auto;
   max-width: 740px;
-  padding: 2rem; }
+  padding: 2rem;
+  margin-left: 0;
+  background-size: 60px; }
 
 div p {
   font-size: 20px; }
@@ -29,7 +31,8 @@ div .none {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  position: relative; }
   div .none > p {
     z-index: 1;
     margin-top: 10% !important;

@@ -13,7 +13,8 @@
   margin-top: 10%;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 100%; }
+  width: 100%;
+  margin-left: 15%; }
   .wp-block-cgb-block-claim-block p {
     font-size: 20px; }
   @media (min-width: 620px) {
@@ -25,7 +26,8 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    position: relative; }
     .wp-block-cgb-block-claim-block .none > p {
       z-index: 1;
       margin-top: 10% !important;

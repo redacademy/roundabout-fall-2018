@@ -19,8 +19,8 @@
 					</div>
 
 					<div class="images-widget">
-						<img class="badth-logo" src="<?php echo get_template_directory_uri() ?>../images/badth-logo-final.jpg" alt="">
-						<img class="hcpc-logo" src="<?php echo get_template_directory_uri() ?>../images/HPC_reg-logo_CMYK.jpg" alt="">
+						<img class="badth-logo" src="<?php echo get_template_directory_uri() ?>/images/badth-logo-final.jpg" alt="">
+						<img class="hcpc-logo" src="<?php echo get_template_directory_uri() ?>./images/HPC_reg-logo_CMYK.jpg" alt="">
 					</div>
 				</div>
 				
