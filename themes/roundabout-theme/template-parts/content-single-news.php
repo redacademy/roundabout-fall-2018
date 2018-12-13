@@ -16,6 +16,7 @@
 
 		<div class="title-tags">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<span class="author-title">by <?php the_author(); ?></span>
 		</div>
 
 	</header><!-- .entry-header -->

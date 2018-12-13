@@ -112,7 +112,16 @@
 --------------------------------------------------------------*/
 
 .single-news {
-
+	span {
+		@include content-margin;
+		text-transform: none;
+		font-size: 1rem;
+		font-weight: bold;
+		margin-bottom: 3rem;
+		@include tablet {
+			font-size: 1.2rem;
+		}
+	}
 	.news-tags {
 		margin-left: 17%;
 		display: flex;
