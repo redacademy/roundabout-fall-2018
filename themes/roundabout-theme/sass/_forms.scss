@@ -9,7 +9,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	font-family: $font__main;
-	font-size: 20px;
+	font-size: 1rem;
 	font-weight: bold;
 	font-style: normal;
 	font-stretch: normal;
@@ -18,11 +18,12 @@ input[type="submit"] {
 	text-align: center;
 	color: $main_white;
 	background-color: $main_pink;
+	padding: 0.2rem 2rem;
 	border: none;
 	outline: none;
 	
 	&:hover {
-		background-color: darken($main_pink, 10%);
+		background-color: darken($main_pink, 5%);
 		}
 
 	&:active,

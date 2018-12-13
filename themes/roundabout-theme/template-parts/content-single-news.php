@@ -26,7 +26,7 @@
 
 
 		<div class="news-tags">
-			<?php echo the_tags('<button>', '</button><button>', '</button>') ;?>
+			<?php echo the_terms($post->ID,'news-tags','<button>', '</button><button>', '</button>') ;?>
 		</div>
 
 	<footer class="entry-footer">
