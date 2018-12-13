@@ -26,7 +26,25 @@
 		.entry-header {
 			margin-bottom: 2rem;
 			}
+		.button-content {
+			display: flex;
+			justify-content: center;
+			padding-left: 50px;
+			@include tablet {
+				padding-left: 50px;
+			}
+			.load-button {
+				padding: 0.6rem 4rem;
+				margin: 1rem 0rem 4rem 0rem;
+			}
+			button.load-button {
+				background-color: $main-green;
+				&:hover {
+					background-color: $hover_green;
+				}
+			}
 		}
+	}
 	.quote-content {
 		margin-bottom: -20px;
 		.quote {
@@ -34,6 +52,10 @@
 			@include content-margin;
 		}
 	}
+
+	.stories-wrapper.hidden .stories-container:nth-child(n+5) {
+		display: none;
+		  }
 
 	.stories-wrapper {
 		margin-left: 15%;
@@ -45,6 +67,7 @@
 			padding-bottom: 4rem;
 		}	
 		.stories-container {
+
 			.entry-header {
 				h2 {
 					font-size: 1.5rem;
@@ -72,12 +95,17 @@
 
 		.entry-title {
 			margin: 1rem 0 0;
-			}
+		}
 		.entry-header {
 			margin-bottom: -0.5rem;
 		}
 	}	
+		.stories-wrapper.hidden article:nth-child(n+5) {
+			display: none;
+		}
 }
+
+
 
 /*--------------------------------------------------------------
 # Single NEWS Page

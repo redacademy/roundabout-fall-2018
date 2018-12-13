@@ -20,7 +20,14 @@ get_header(); ?>
 <?php $args = array (
 	'order' => 'DESC',
 	'posts_per_page' => 1,
-	'post_type' => 'stories'
+	'post_type' => 'stories',
+	'tax_query' => array (
+		array (
+			'taxonomy' => 'featured-story',
+			'field' => 'slug',
+			'terms' => array ('featured')
+		)
+	)
 );
 
 $stories = new WP_Query($args);
@@ -37,7 +44,7 @@ $stories = new WP_Query($args);
 		<?php if ( have_posts() ) : ?>
 	
 			<?php /* Start the Loop */ ?>
-			<div class="stories-wrapper">
+			<div class="stories-wrapper hidden">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="stories-container">
 						<?php
@@ -54,6 +61,9 @@ $stories = new WP_Query($args);
 
 			<?php endif; ?>
 			</div>
+			<div class="button-content">
+ 				<button class="load-button">Load More</button>
+ 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

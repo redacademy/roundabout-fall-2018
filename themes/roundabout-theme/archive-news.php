@@ -18,21 +18,24 @@ get_header(); ?>
 
 
 			<?php /* Start the Loop */ ?>
-		<div class="stories-wrapper">
-			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="stories-wrapper hidden">
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content', 'news' );
-				?>
+					<?php
+						get_template_part( 'template-parts/content', 'news' );
+					?>
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 
-			<?php else : ?>
+				<?php else : ?>
 
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php endif; ?>
-		</div>
+				<?php endif; ?>
+			</div>
+			<div class="button-content">
+ 				<button class="load-button">Load More</button>
+ 			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
