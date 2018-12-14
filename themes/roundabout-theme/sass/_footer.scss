@@ -1,19 +1,37 @@
 .site-footer {
-    padding: 25px 0 0 18px;
+    margin: 25px 0 0 18px;
+
+    @media screen and (min-width: 320px) {
+        margin: 25px 0 0 55px;
+    }
+
+    @include tablet {
+        margin: 25px 0 0 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 25px 0 0 100px;
+    }
+
+    @include desktop {
+        margin: 100px 0;
+    }
     
     .footer-container {
         display: flex;
         margin-left: 18px;
         
         @include desktop {
+            display: flex;
+            justify-content: space-evenly;
             margin-left: 146px;
         }
     
         .content {
-            width: 100px;
+            width: 120px;
 
-            @include desktop {
-                width: initial;
+            @include tablet {
+                width: 64vw;
             }
 
             .widget-container {
@@ -33,7 +51,7 @@
                         }
                     }
 
-                    @include desktop {
+                    @include tablet {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -45,8 +63,8 @@
                         font-size: 11px;
                         line-height: 1.8;
 
-                        @include desktop {
-                            font-size: 15px;
+                        @include tablet {
+                            // font-size: 20px;
 
                             &:nth-child(1) {
                                 grid-row-start: 1;
@@ -78,39 +96,66 @@
                                 grid-column-start: 1;
                             }
                         }
+                        @include desktop {
+                            font-size: 20px;
+                        }
+                        @media screen and (min-width: 2560px) {
+                            font-size: 35px;
+                        }
                     }
 
                 
             }
         }
 
-            .images-widget {
+            .images-container {
                 display: inline-flex;
                 align-items: flex-end;
 
                 @include desktop {
                     align-items: flex-start;
-                    margin-left: 30px;
+                    margin: 0 0 0 10px;
                 }
 
                     img {
                         margin: 1px;
                         border: 0.5px solid black;
+                        
+                        @media screen and (min-width: 2560px) {
+                            height: 150px;
+                        }
                     }
 
                     .badth-logo {
                         height: 38px;
                         width: 81px;
+                        @include desktop {
+                            width: 120px;
+                            height: 58px;
+                            margin: 0 21px 0 0;
+                        }
+                        @media screen and (min-width: 2560px) {
+                            height: 150px;
+                            width: 300px;
+                        }
                     }
 
                     .hcpc-logo {
                         height: 38px;
                         width: 37px;
+                        @include desktop {
+                            width: 56px;
+                            height: 58px;
+                        }
+                        @media screen and (min-width: 2560px) {
+                            height: 150px;
+                            width: 180px;
+                        }
                     }
             }
     }
     .site-info {
-
+ 
         .copyright-container {
             font-size: 5px;
             text-align: center;
