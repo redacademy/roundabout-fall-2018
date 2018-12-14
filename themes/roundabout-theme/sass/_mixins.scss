@@ -25,10 +25,17 @@
 }
 
 //@queries
+$max-width: 320px;
 $tablet-width: 620px;
 $desktop-width: 1080px;
 $desktop-width-1440: 1440px;
 $desktop-width-1920: 1920px;
+
+@mixin minimum-width {
+  @media (max-width: #{$max-width}) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
