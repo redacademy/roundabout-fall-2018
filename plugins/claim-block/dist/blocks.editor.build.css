@@ -1,0 +1,241 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-cgb-block-claim-block {
+  color: #292929;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+  margin-left: 0;
+  background-size: 60px; }
+
+div p {
+  font-size: 20px; }
+
+@media (min-width: 620px) {
+  div p {
+    font-size: 30px; } }
+
+div .none {
+  margin-left: 15%;
+  padding: 0 8% 0 3%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative; }
+  div .none > p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
+  div .none button, div .none a.button {
+    border: none;
+    width: 120pt;
+    height: 40pt;
+    font-size: 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #aee34d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin: auto; }
+    div .none button:hover, div .none a.button:hover {
+      background-color: #9adb22; }
+    @media (min-width: 1080px) {
+      div .none button, div .none a.button {
+        width: 240px;
+        height: 60px; } }
+
+div .round {
+  margin-left: 15%;
+  padding: 0 8% 0 3%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative; }
+  div .round::before {
+    width: 100px;
+    height: 100px;
+    content: '';
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+    background-size: 100px 100px;
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    left: -30px; }
+  @media (min-width: 620px) {
+    div .round::before {
+      margin-top: 10%;
+      width: 130px;
+      height: 130px;
+      background-size: 130px 130px;
+      top: -70px;
+      left: -30px; } }
+  @media (min-width: 1080px) {
+    div .round::before {
+      width: 160px;
+      height: 160px;
+      background-size: 160px 160px;
+      top: -95px;
+      left: -75px; } }
+  div .round > p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
+  div .round button, div .round a.button {
+    border: none;
+    width: 120pt;
+    height: 40pt;
+    font-size: 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #aee34d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin: auto; }
+    div .round button:hover, div .round a.button:hover {
+      background-color: #9adb22; }
+    @media (min-width: 1080px) {
+      div .round button, div .round a.button {
+        width: 240px;
+        height: 60px; } }
+
+div .heart {
+  margin-left: 15%;
+  padding: 0 8% 0 3%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative; }
+  div .heart::before {
+    width: 100px;
+    height: 100px;
+    content: '';
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+    background-size: 100px 100px;
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    left: -30px; }
+  @media (min-width: 620px) {
+    div .heart::before {
+      margin-top: 10%;
+      width: 130px;
+      height: 130px;
+      background-size: 130px 130px;
+      top: -70px;
+      left: -30px; } }
+  @media (min-width: 1080px) {
+    div .heart::before {
+      width: 160px;
+      height: 160px;
+      background-size: 160px 160px;
+      top: -95px;
+      left: -75px; } }
+  div .heart > p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
+  div .heart button, div .heart a.button {
+    border: none;
+    width: 120pt;
+    height: 40pt;
+    font-size: 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #ff5182;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin: auto; }
+    div .heart button:hover, div .heart a.button:hover {
+      background-color: #ff1e5d; }
+    @media (min-width: 1080px) {
+      div .heart button, div .heart a.button {
+        width: 240px;
+        height: 60px; } }
+
+div .number {
+  margin-left: 15%;
+  padding: 0 8% 0 3%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative; }
+  div .number > p {
+    z-index: 1;
+    margin-top: 10% !important;
+    margin-left: 5% !important;
+    padding: 0 !important; }
+  div .number button, div .number a.button {
+    border: none;
+    width: 120pt;
+    height: 40pt;
+    font-size: 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: #aee34d;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin: auto; }
+    div .number button:hover, div .number a.button:hover {
+      background-color: #9adb22; }
+    @media (min-width: 1080px) {
+      div .number button, div .number a.button {
+        width: 240px;
+        height: 60px; } }
+  div .number::before {
+    white-space: nowrap;
+    position: absolute;
+    content: "80+";
+    font-size: 100px;
+    font-weight: 700;
+    color: #aee34d;
+    z-index: 0;
+    top: -80px;
+    left: -35px; }
+    @media (min-width: 1080px) {
+      div .number::before {
+        font-size: 160px;
+        top: -192px; } }
+  @media (min-width: 1080px) {
+    div .number > p {
+      margin-top: 0 !important; } }

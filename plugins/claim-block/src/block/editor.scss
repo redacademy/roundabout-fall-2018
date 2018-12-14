@@ -1,0 +1,20 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+@import "./backgrounds";
+
+.wp-block-cgb-block-claim-block  {
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+  margin-left: 0;
+  background-size: 60px;
+}
+
+div {
+  @include backgrounds();
+}
