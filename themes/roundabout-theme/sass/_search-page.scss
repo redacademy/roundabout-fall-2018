@@ -2,7 +2,7 @@
 # Search Page
 --------------------------------------------------------------*/
 
-.search-results{
+.search-results, .search-no-results {
 
 	.site-main {
 		.page-title {	
@@ -11,6 +11,9 @@
 			padding: 0;
 			margin-top: 5%;
 		}	
+		.hentry {
+			margin: 0;
+		}
 		.entry-title, .entry-meta, .entry-summary{
 			@include content-margin;
 		}

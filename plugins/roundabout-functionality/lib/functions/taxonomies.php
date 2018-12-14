@@ -101,7 +101,7 @@ function news_taxonomy() {
 		'name'                       => _x( 'News Tags', 'Taxonomy General Name', 'text_domain' ),
 		'singular_name'              => _x( 'News Tag', 'Taxonomy Singular Name', 'text_domain' ),
 		'menu_name'                  => __( 'News Tags', 'text_domain' ),
-    'all_items'                  => __( 'All Items', 'text_domain' ),
+    	'all_items'                  => __( 'All Items', 'text_domain' ),
 		'parent_item'                => __( 'Parent Item', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
 		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
@@ -123,7 +123,7 @@ function news_taxonomy() {
 	$args = array(
 		'labels'                     => $labels,
 		'hierarchical'               => false,
-    'public'                     => true,
+    	'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,

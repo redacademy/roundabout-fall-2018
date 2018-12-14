@@ -16,6 +16,7 @@
 
 		<div class="title-tags">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<span class="author-title">by <?php the_author(); ?></span>
 		</div>
 
 	</header><!-- .entry-header -->
@@ -26,7 +27,7 @@
 
 
 		<div class="news-tags">
-			<?php echo the_tags('<button>', '</button><button>', '</button>') ;?>
+			<?php echo the_terms($post->ID,'news-tags','<button>', '</button><button>', '</button>') ;?>
 		</div>
 
 	<footer class="entry-footer">

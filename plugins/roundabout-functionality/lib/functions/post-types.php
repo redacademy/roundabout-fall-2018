@@ -45,7 +45,6 @@ function news_init() {
 	    'description' => __( 'News information pages.', 'text_domain' ),
         'labels' => $labelsnews,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
-		'taxonomies' => array( 'post_tag' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
