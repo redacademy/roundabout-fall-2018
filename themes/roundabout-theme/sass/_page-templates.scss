@@ -66,9 +66,14 @@ body.home{
                 @include content-margin;
             }
         }
-        .entry-content{
-            p, h1, h2, h3, h4, fieldset{
+        .entry-content {
+            >p, >h1, >h2, >h3, >h4, >fieldset {
                 @include content-margin;
+            }
+            >section {
+              >p, >h1, >h2, >h3, >h4, >fieldset {
+                @include content-margin;
+              }
             }
             figure{
                 margin: 0;
@@ -84,5 +89,5 @@ body:not(.post-type-archive-member):not(.member-template-default):not(.supporter
         img {
             width: 100vw;
         }
-    } 
+    }
 }
