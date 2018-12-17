@@ -27,9 +27,25 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+					<ul>
+						<li>
+							<a href=""><img class="roundabout-logo" src="<?php echo get_template_directory_uri() ?>../images/roundabout-logo.svg" alt=""></a>
+						</li>
+
+						<li>
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</li>
+
+						<li>
+							
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button>
+								
+						</li>
+					</ul>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
+				
+				
 			</header><!-- #masthead -->
 
 			<div id="content" class="site-content">
