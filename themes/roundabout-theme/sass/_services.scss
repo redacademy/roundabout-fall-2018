@@ -1,3 +1,4 @@
+/*
 .content-services {
   .entry-content {
     @include content-margin;
@@ -66,6 +67,27 @@
             padding-right: 0;
           }
         }
+      }
+    }
+  }
+}
+*/
+
+.content-services {
+  .entry-content {
+    section {
+      &:nth-child(1) {
+        @include section-image("../../images/normalized/face-hands-2-1200x1200.png", 300px, 'left');
+        margin-bottom: $base__space-unit*2;
+        > h2 {
+          position: relative;
+          &::before {
+            left: -350px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        @include section-image("../../images/normalized/two-faces-2-1200x1200.png", 300px, 'right');
       }
     }
   }

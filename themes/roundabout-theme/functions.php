@@ -121,7 +121,8 @@ require get_template_directory() . '/inc/extras.php';
 
 function split_to_sections($content) {
 	$pagename = get_the_title();
-	if($pagename != 'Our services' && $pagename !='About') {
+
+	if($pagename != 'Our services' && $pagename !='About' && $pagename != 'Roundabout') {
 		return $content;
 	}
 
@@ -208,7 +209,7 @@ function recent_posts($no_posts = 1, $excerpts = true) {
 	$request = "SELECT ID, post_title, post_excerpt FROM $wpdb->posts WHERE post_status = 'publish' AND post_type='stories' ORDER BY post_date DESC LIMIT $no_posts";
  
 	$posts = $wpdb->get_results($request);
- 
+	$output = '';
 	if($posts) {
  
 				foreach ($posts as $posts) {
