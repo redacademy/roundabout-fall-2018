@@ -36,7 +36,7 @@ $terms = get_terms( array(
     <main id="main" class="site-main" role="main">
 
         <header class="page-header">
-            <h1 class="page-title">Team Members</h1>
+            <!-- <h1 class="page-title">Team Members</h1> -->
             <ul class="profile-type-list">
 				<?php foreach ( $terms as $term ) : ?>
                     <li>
