@@ -32,7 +32,6 @@ $terms = get_terms( array(
 <?php $members = new WP_Query(array('post_type'=>'member', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
 
         <header class="page-header">
-            <h1 class="page-title">Team Members</h1>
             <ul class="profile-type-list">
 				<?php foreach ( $terms as $term ) : ?>
                     <li>
