@@ -27,7 +27,7 @@ input[type="submit"] {
 
 	&:active,
 	&:focus {
-
+		outline: none;
 	}
 }
 
@@ -38,6 +38,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
 textarea {
 	color: #666;
 	border: 4px solid $main_green;
