@@ -31,6 +31,9 @@ $terms = get_terms( array(
 <!-- // the query -->
 <?php $members = new WP_Query(array('post_type'=>'member', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
 
+<div id="primary" class="post-type-archive">
+    <main id="main" class="site-main" role="main">
+
         <header class="page-header">
             <ul class="profile-type-list">
 				<?php foreach ( $terms as $term ) : ?>

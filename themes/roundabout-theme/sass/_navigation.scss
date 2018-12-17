@@ -84,13 +84,13 @@ a.button {
 				width: 200px;
 			}
 
-			:hover > a,
-			.focus > a {
-			}
+			// :hover > a,
+			// .focus > a {
+			// }
 
-			a:hover,
-			a.focus {
-			}
+			// a:hover,
+			// a.focus {
+			// }
 		}
 
 		li:hover > ul,
@@ -102,19 +102,19 @@ a.button {
 		float: left;
 		position: relative;
 
-		&:hover > a,
-		&.focus > a {
-		}
+		// &:hover > a,
+		// &.focus > a {
+		// }
 	}
 	a {
 		display: block;
 		text-decoration: none;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+	// .current_page_item > a,
+	// .current-menu-item > a,
+	// .current_page_ancestor > a {
+	// }
 }
 
 /* Small menu. */
