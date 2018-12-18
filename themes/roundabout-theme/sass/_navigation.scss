@@ -60,13 +60,53 @@ a.button {
 		// margin: 0;
 		// padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		width: 50vw;
+		@include desktop{
+			width: auto;
+		}
+
+		li ul {
+			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
-			position: absolute;
-			top: $base__space-unit;
+			// position: absolute;
+			// top: $base__space-unit;
 			left: -999rem;
 			z-index: 99999;
+			top: 2.8rem;
+			@include desktop{
+				position: absolute;
+			}
+			li{
+				margin-left: 0;
+				margin-top: 0;
+				width: 100%;
+				&:first-child{
+					margin-top: 1rem;
+				}
+				&:last-child{
+					margin-bottom: 0.5rem;
+				}
+				@include desktop{
+					width: auto;
+					margin-top: 0;
+					margin-left: 0;
+					&:first-child{
+						margin-left: 0;
+						margin-top: 0;
+					}
+				}
+				@include desktop-1440{
+					&:first-child{
+						margin-top: 1rem;
+					}
+				}
+				a{
+					width: 100%;
+					@include desktop{
+						width: auto;
+					}
+				}
+			}
 
 			ul {
 				left: -999rem;
@@ -123,7 +163,15 @@ a.button {
 	display: block;
 }
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-width: 768px) {
+// 	.menu-toggle {
+// 		display: none;
+// 	}
+// 	.main-navigation ul {
+// 		display: block;
+// 	}
+// }
+@include desktop{
 	.menu-toggle {
 		display: none;
 	}

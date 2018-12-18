@@ -107,3 +107,25 @@
     }
   })(container);
 })();
+
+
+/**
+ * Handles adding the movement to search button when clicking
+ */
+
+$('header .icon-search').click(function(event){
+  event.preventDefault();
+
+  $(this).hide();
+  $('button.search-submit').show();
+  $('.search-field').toggle('slow');
+});
+
+$('button.search-submit').click(function(event) {
+  event.preventDefault();
+  $('header .icon-search').show();
+  $('button.search-submit').hide();
+  $('.search-field').hide('slow');
+  $('.search-form').submit();
+
+})
