@@ -12,7 +12,7 @@ header.site-header {
         padding: 1rem 0 0 1rem;
     }
     .site-branding {
-        order: 4;
+        order: 5;
         width: 100vw;
         flex-grow: 100;
         p {
@@ -34,7 +34,8 @@ header.site-header {
             height: 30px;
         }
         @include desktop{
-            width: 90px;
+            // width: 90px;
+            width: 70px;
             height: 76px;
             img{
                 width: auto;
@@ -51,9 +52,14 @@ header.site-header {
 
         @include desktop{
             order: 3;
+            // order: 4;
             flex-grow: 1;
-            margin-top: 23px;
+            margin-top: 25px;
         }
+        @include desktop-1440{
+            flex-grow: 0;
+        }
+         
         fieldset {
             margin: 0;
             padding: 0;
@@ -74,9 +80,16 @@ header.site-header {
             i {
                 margin-top: 10px;
                 cursor: pointer;
-
                 font-size: 30px;
                 color: $main_white;
+                @include desktop{
+                    margin-top: 15px;
+                    font-size: 25px;
+                }
+                @include desktop-1440{
+                    margin-top: 10px;
+                    font-size: 30px;
+                }
             }
             button{
                 display: none;
@@ -86,12 +99,109 @@ header.site-header {
             }
         }
     }
-    
+
+    //donate button
+    .donate-logo{
+        order: 3;
+        position: relative;
+        margin-top: 26px;
+        // margin-right: 20px;
+        margin-right: 33px;
+        line-height: 10px;
+        width: 90px;
+        font-size: 1rem;
+        font-weight: 700;
+        &::after{
+            content: "\f004";
+            font-family: "FontAwesome"; 
+            position: absolute;
+            color: $main_pink;
+            top: 5%;
+            // left: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            font-size: 1.4rem;
+            font-weight: 900;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            @include desktop{
+                font-size: 2rem;
+                top: 25%;
+                // left: 50%;
+                left: 86%;
+            }
+            @include desktop-1440{
+                font-size: 3rem;
+            }
+        }
+        &::before{
+            content: "\f111";
+            font-family: "FontAwesome"; 
+            position: absolute;
+            color: $main_white;
+            // left: 50%;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            font-weight: 900;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            @include desktop{
+                font-size: 4.4rem;
+                top: 25%;
+                // left: 50%;
+                left: 86%;
+            }
+            @include desktop-1440{
+                font-size: 5.4rem;
+            }
+        }
+        //.donate-logo @query
+        @include desktop{
+            order: 4;
+            // order: 3;
+            // flex-grow: 1;
+            flex-grow: 1;
+            line-height: inherit;
+            margin-top: 42px;
+            // display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: right;
+            padding-right: 6%;
+        }
+        @include desktop-1440{
+            flex-grow: 1;
+            margin-top: 40px;
+            font-size: 15px;
+            padding-right:8%;
+        }
+        span{
+            display: inline;
+            @include desktop{
+                // display: inline;
+                margin-top: 45px;
+                font-size: 15px;
+            }
+            @include desktop-1440{
+                margin-top: 40px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    //menu
     .main-navigation{
         align-self: flex-end;
         width: auto;
         float: initial;
-        order: 3;
+        order: 4;
         @include desktop{
             order: 2;
             flex-grow: 1;        
@@ -131,19 +241,17 @@ header.site-header {
                 -webkit-font-smoothing: antialiased;
             }
         }
-        // &.togged {
-        //     button.menu-toggle{
-        //         &::after{
-        //             content: "\f00d";
-        //             font-family: "FontAwesome";
-        //         } 
-        //     }
-        // }
-
         li{
             float: inherit;
             margin-left: 40px;
             padding-bottom: 1rem;
+            @include desktop-1440{
+                margin-left: 5%;
+                a{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
             &::after{
                 content: "";
                 position: absolute;
@@ -160,11 +268,12 @@ header.site-header {
             }
             @include desktop{
                 display: inline-block;
+                margin-left: 24px;
                 &::after{
                     content: none;
                 }
                 a{
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: bold;
                 }
                 &:hover::before {
@@ -179,11 +288,23 @@ header.site-header {
                 &:first-child{
                     margin-left: 20px;
                 }
-                ul li{
-                    margin-left: 0;
-                    &:first-child{
+                ul {
+                    background-color: rgba(255, 81, 130, 0.8);
+                    padding: 1rem 1.5rem 0 2rem;
+                    top: 1.75rem;
+                    li{
                         margin-left: 0;
+                        &:first-child{
+                            margin-left: 0;
+                        }
                     }
+                }
+            }
+            @include desktop-1440{
+                margin-left: 5%;
+                a{
+                    font-size: 20px;
+                    font-weight: bold;
                 }
             }
         }

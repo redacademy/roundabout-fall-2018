@@ -33,7 +33,6 @@
 
 				<a class="roundabout-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/roundabout-logo.svg" alt=""></a>
 
-				<!-- <li class="search-menu search-menu default"><a title="" href="#"></a> -->
 				<form role="search" method="get" class="search-form" action="<?php get_search_query() ?>">
 					<fieldset>
 						<label>
@@ -52,10 +51,8 @@
 						</button>
 					</fieldset>
 				</form>
-				<!-- </li> -->
 
-				<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-
+				<a class="donate-logo" href="https://donate.justgiving.com/donation-amount?uri=aHR0cHM6Ly9kb25hdGUtYXBpLmp1c3RnaXZpbmcuY29tL2FwaS9kb25hdGlvbnMvNDE1YzY0M2EwNzQ3NGVlMmI5ZWM0ZWFiM2ZhZDY3NjM="><span>Donate</span></a>
 
 			</header><!-- #masthead -->
 
