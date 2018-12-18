@@ -6,7 +6,6 @@
 //Tagline sentence
 header.site-header {
     display: flex;
-    // flex-direction: column-reverse;
     flex-wrap: wrap;
     @include desktop{
         padding: 1rem 0 0 1rem;
@@ -34,7 +33,6 @@ header.site-header {
             height: 30px;
         }
         @include desktop{
-            // width: 90px;
             width: 70px;
             height: 76px;
             img{
@@ -46,13 +44,11 @@ header.site-header {
     //search 
     form{
         order: 2;
-        // width: 40px;
         flex-grow: 1;
         height: 52px;
 
         @include desktop{
             order: 3;
-            // order: 4;
             flex-grow: 1;
             margin-top: 25px;
         }
@@ -68,7 +64,6 @@ header.site-header {
                 width: 154px;
                 outline: none;
                 color: $main_white;
-                // height: 30px;
                 height: 52px;
                 background: none;
                 border: 0;
@@ -105,7 +100,6 @@ header.site-header {
         order: 3;
         position: relative;
         margin-top: 26px;
-        // margin-right: 20px;
         margin-right: 33px;
         line-height: 10px;
         width: 90px;
@@ -117,7 +111,6 @@ header.site-header {
             position: absolute;
             color: $main_pink;
             top: 5%;
-            // left: 50%;
             left: 100%;
             transform: translate(-50%, -50%);
             font-size: 1.4rem;
@@ -130,7 +123,6 @@ header.site-header {
             @include desktop{
                 font-size: 2rem;
                 top: 25%;
-                // left: 50%;
                 left: 86%;
             }
             @include desktop-1440{
@@ -142,7 +134,6 @@ header.site-header {
             font-family: "FontAwesome"; 
             position: absolute;
             color: $main_white;
-            // left: 50%;
             left: 100%;
             transform: translate(-50%, -50%);
             font-size: 2.5rem;
@@ -155,7 +146,6 @@ header.site-header {
             @include desktop{
                 font-size: 4.4rem;
                 top: 25%;
-                // left: 50%;
                 left: 86%;
             }
             @include desktop-1440{
@@ -165,12 +155,9 @@ header.site-header {
         //.donate-logo @query
         @include desktop{
             order: 4;
-            // order: 3;
-            // flex-grow: 1;
             flex-grow: 1;
             line-height: inherit;
             margin-top: 42px;
-            // display: inline-block;
             font-size: 20px;
             font-weight: 700;
             text-align: right;
@@ -224,11 +211,9 @@ header.site-header {
         button.menu-toggle {
             width: auto;
             height: auto;
-            // padding: 0 2rem;
             padding-right: 10px;
             background-color: transparent;
             padding-top: 10px;
-
             &::after{
                 content: "\f0c9";
                 font-family: "FontAwesome"; 
@@ -330,11 +315,10 @@ body.home{
 }
 
 /* General Layout */
-
 .content-area{
     margin-top: 8%;
-
-    .site-main > article{
+  
+    .site-main > article, .site-main > section{
         position: relative;
         padding: 5% 0;
         &::after {
@@ -359,9 +343,14 @@ body.home{
                 @include content-margin;
             }
         }
-        .entry-content{
-            p, h1, h2, h3, h4, fieldset{
+        .entry-content {
+            >p, >h1, >h2, >h3, >h4, >fieldset {
                 @include content-margin;
+            }
+            >section {
+              >p, >h1, >h2, >h3, >h4, >fieldset {
+                @include content-margin;
+              }
             }
             figure{
                 margin: 0;
@@ -371,7 +360,6 @@ body.home{
 }
 
 /* Front page */
-
 body.home{
     .entry-content{
         figure iframe {
@@ -423,6 +411,5 @@ body:not(.post-type-archive-member):not(.member-template-default):not(.supporter
                 margin-right: 10%;
             }
         }
-        
     }
 }

@@ -9,7 +9,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	font-family: $font__main;
-	font-size: 20px;
+	font-size: 1rem;
 	font-weight: bold;
 	font-style: normal;
 	font-stretch: normal;
@@ -22,12 +22,12 @@ input[type="submit"] {
 	outline: none;
 	
 	&:hover {
-		background-color: darken($main_pink, 10%);
+		background-color: darken($main_pink, 5%);
 		}
 
 	&:active,
 	&:focus {
-
+		outline: none;
 	}
 }
 
@@ -38,6 +38,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="tel"],
 textarea {
 	color: #666;
 	border: 4px solid $main_green;

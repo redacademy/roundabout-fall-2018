@@ -6,8 +6,8 @@ html {
   box-sizing: border-box;
   @include font-size(1);
 
-  background: url(../../images/gradient-final.jpg) #eb5e79 repeat fixed;
-  background-size: cover;  
+  background: url(../../images/gradient-old/gradient-final.jpg) #eb5e79 no-repeat fixed;
+  background-size: cover;
 }
 
 *,
@@ -144,17 +144,6 @@ p{
     line-height: 32px;
     letter-spacing: 0.8px;
   }
-}
-
-.tagline {
-  font-family: $font__main-titles;
-  font-size: 9rem;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.13;
-  letter-spacing: 5px;
-  color: $main_white;
 }
 
 .info-numbers {

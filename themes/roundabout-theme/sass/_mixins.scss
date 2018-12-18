@@ -25,10 +25,17 @@
 }
 
 //@queries
+$max-width: 320px;
 $tablet-width: 620px;
 $desktop-width: 1080px;
 $desktop-width-1440: 1440px;
 $desktop-width-1920: 1920px;
+
+@mixin minimum-width {
+  @media (max-width: #{$max-width}) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) {
@@ -102,4 +109,70 @@ $desktop-width-1920: 1920px;
 		font-size: 1.875rem;
 		line-height: 1.67;
 	}
+}
+
+@mixin pre-main-text($text) {
+  main {
+    &::before {
+      font-family: $font__main-titles;
+      margin-left: 10%;
+      line-height: 1.13;
+      content: $text;
+      display: block;
+      font-weight: bold;
+      @include font-size(3);
+      text-transform: uppercase;
+      color: $main_white;
+      font-stretch: normal;
+      width: 1px; // always wrap words
+
+      @include tablet {
+        @include font-size(4);
+      }
+
+      @include desktop {
+        @include font-size(10);
+        margin-bottom: $base__space-unit*2;
+      }
+    }
+  }
+}
+
+@mixin section-image($url,$height, $side) {
+  display: flex;
+  flex-direction: column;
+
+  >h2 {
+    &::before {
+      content: "";
+      background: url($url) no-repeat top center;
+      background-size: $height $height;
+      width: $height;
+      height: $height;
+      display: block;
+      margin: $base__space-unit auto;
+    }
+  }
+
+  @include desktop {
+    > h2, > p {
+      width: 50%;
+    }
+    @if $side == left {
+      align-items: flex-end;
+    }
+
+    > h2 {
+      position: relative;
+      &::before {
+        position: absolute;
+        @if $side == left {
+          left: -$height;
+        } @else {
+          left: 100%
+        }
+        top: 0;
+      }
+    }
+  }
 }

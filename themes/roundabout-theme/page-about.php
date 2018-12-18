@@ -16,8 +16,7 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
-    </main><!-- #main -->
-</div><!-- #primary -->
+        <section class="team-members">
 
 <!-- Calling team member part -->
 <?php //declare $terms for members slugs
@@ -36,7 +35,6 @@ $terms = get_terms( array(
     <main id="main" class="site-main" role="main">
 
         <header class="page-header">
-            <h1 class="page-title">Team Members</h1>
             <ul class="profile-type-list">
 				<?php foreach ( $terms as $term ) : ?>
                     <li>
@@ -58,10 +56,10 @@ $terms = get_terms( array(
 
 			<?php endwhile; ?>
         </div><!-- .content-profiles -->
-
-
+    </section>
     </main><!-- #main -->
 </div><!-- #primary -->
+
 
 <?php wp_reset_postdata();?>
 

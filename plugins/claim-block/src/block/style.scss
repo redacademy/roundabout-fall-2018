@@ -3,28 +3,40 @@
  *
  * CSS for both Frontend+Backend.
  */
+
+@import "../../../../themes/roundabout-theme/sass/mixins";
+@import "./variables";
 @import "./backgrounds";
 
-.wp-block-cgb-block-claim-block  {
 
+.wp-block-cgb-block-claim-block {
+  @include content-margin;
   @include backgrounds();
 
-  margin: 0 auto;
-  align-self: center;
-  width: 100%;
 
-  p {
-    margin: 0 auto !important;
-    padding: 3rem 4rem 4rem 8rem !important;
+  > div {
+    margin-left: $left-spacing;
+    padding-right: $left-spacing;
   }
 
-  @include desktop {
-    width: 60% !important;
+  p {
+    @include font-size(1);
+    line-height: 1.67;
+  }
 
+  @include tablet {
     p {
-      max-width: 75% !important;
-      margin: 10% 0 0 20% !important;
-      padding: 3rem 0 3rem 0 !important
+      font-size: 25px;
     }
+  }
+  @include desktop {
+    @include font-size(1.5);
+    margin-left: 30%;
+    padding: 0 16% 0 6%;
+
+    max-width: 70%;
+    align-self: flex-start;
+    margin-top: $base__space-unit*2;
+    margin-bottom: $base__space-unit*2;
   }
 }
