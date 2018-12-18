@@ -11,14 +11,13 @@ $( document ).ready(function() {
   $('.member').hide();
   $('.member.member-type-dramatherapists').show();
 
-
   //selected and active li from supporter member
   $('.Patrons').addClass('active');
   $('.supporter').hide();
   $('.supporter.supporters-type-patrons').show();
 
   //onclick show only one type from team member
-  $('.profile-type-list a').on('click', function(event){
+  $('.profile-type-list a').on('click', function(){
     event.preventDefault();
     let selector = 'member-type-' + ($(this).attr('class')).toLowerCase().split(' ')[0];
     $('.member').hide();

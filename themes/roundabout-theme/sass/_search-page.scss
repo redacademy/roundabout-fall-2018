@@ -2,39 +2,15 @@
 # Search Page
 --------------------------------------------------------------*/
 
-.search-results, .search-no-results {
+.search-results{
 
 	.site-main {
-		.search-pagination {
-			text-align: center;
-			font-size: 1.2rem;
-			margin: 1rem 0rem;
-
-			@include tablet {
-				margin: 1rem 0rem 1rem 5rem;
-			}
-			.page-numbers.current{
-				color: $hover_green;
-			}
-			a.page-numbers {
-				color: #fff;
-				&:hover {
-					color: $hover_green;
-				}
-			}
-		}
-		.page-content {
-			@include content-margin;
-		}
 		.page-title {	
 			@include tagline;	
 			@include content-margin;
 			padding: 0;
 			margin-top: 5%;
 		}	
-		.hentry {
-			margin: 0;
-		}
 		.entry-title, .entry-meta, .entry-summary{
 			@include content-margin;
 		}

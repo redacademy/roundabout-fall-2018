@@ -1,6 +1,7 @@
-/*
 .content-about {
   .entry-content {
+    @include content-margin;
+
     section {
       &:nth-child(1) {
         background: url("../../images/puppet-2@3x.png") no-repeat;
@@ -16,20 +17,17 @@
 
         p {
           margin-left: 0;
-          margin-bottom: 10%;
         }
-
 
         @include desktop {
           align-items: flex-end;
-          background-position: 5% 75px;
-
+          background-position: 5% 40%;
           h2 {
-            width: 55%;
             margin-top: 0;
+            align-self: center;
           }
 
-          >p {
+          p {
             max-width: 55%;
             padding-right: 0;
           }
@@ -51,35 +49,20 @@
 
         p {
           margin-left: 0;
-          margin-bottom: 10%;
         }
 
         @include desktop {
           align-items: flex-start;
-          background-position: 95% 75px;
-
+          background-position: 95% 20%;
           h2 {
             margin-top: 0;
           }
 
-          >p, >h2 {
-            width: 55%;
+          p {
+            max-width: 55%;
             padding-right: 0;
           }
         }
-      }
-    }
-  }
-}
-*/
-.content-about {
-  .entry-content {
-    section {
-      &:nth-child(1) {
-        @include section-image("../../images/normalized/puppet-2-1200x1200.png", 300px, 'left');
-      }
-      &:nth-child(2) {
-        @include section-image("../../images/normalized/head-puddle-2-1200x1200.png", 300px, 'right');
       }
     }
   }

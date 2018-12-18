@@ -1,105 +1,94 @@
-@import "../../../../themes/roundabout-theme/sass/mixins";
-@import "../../../../themes/roundabout-theme/sass/variables";
-@import "./variables";
+//@queries
+$tablet-width: 620px;
+$desktop-width: 1080px;
 
-@mixin claim-buttons($button-color) {
-  @include mobile-buttons;
-  @include font-size(1);
-  text-decoration: none;
-  background-color: $button-color;
-  &:hover {
-    background-color: darken($button-color, 10%);
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 
-
-@mixin image-background($image) {
-  margin-top: $top-spacing;
-
-  &::before {
-    margin-top: $base__space-unit;
-    width: $background-size;
-    height: $background-size;;
-    content: '';
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/#{$image}.svg") no-repeat;
-    background-size: $background-size $background-size;;
-    position: absolute;
-    z-index: 0;
-    top: -$top-spacing;
-    left: -$left-spacing;
-
-  }
-
-}
-
-
-@mixin claim-block($button-color) {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  >p {
-    z-index: 1;
-  }
-
-  button, a.button {
-    @include claim-buttons($button-color);
-    @include desktop {
-      @include desktop-buttons();
-    }
-    font-weight: bold;
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
 }
 
 @mixin backgrounds() {
+
+  p {
+    font-size: 20px;
+  }
   .none {
-    @include claim-block(#ff5182);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding: 2rem 2rem 2rem 0rem !important;
+    }
+
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+
+      .components-base-control__field {
+        margin: 8px;
+      }
+    }
+    @include desktop {
+      p {
+        margin: 0 auto !important;
+      }
+    }
   }
 
   .round {
-    @include image-background("oval-team");
-    @include claim-block(#aee34d);
+    border: 1px solid #aee34d;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+    background-size: 160px 160px;
+    display: flex;
+    flex-direction: column;
 
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+      background-color: #aee34d;
+      &:hover {
+        background-color: darken(#aee34d, 10%);
+      }
+      .components-base-control__field {
+        margin: 8px;
+      }
+    }
   }
 
   .heart {
-    @include image-background("heart");
-    @include claim-block(#ff5182);
+    border: 1px solid #ff5182;
+    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+    background-size: 160px 160px;
+    display: flex;
+    flex-direction: column;
+
+    button, a.button {
+      align-self: center;
+      display: block;
+      text-decoration: none;
+      background-color: #ff5182;
+      &:hover {
+        background-color: darken(#ff5182, 10%);
+      }
+    }
+    .components-base-control__field {
+      margin: 8px;
+    }
   }
 
-  .number {
-    @include claim-block(#aee34d);
-
-    &::before  {
-      font-family: $font__main-titles;
-      white-space: nowrap;
-      position: absolute;
-      content: "80+";
-      @include font-size(4);
-      font-weight: 700;
-      color: #aee34d;
-      z-index: 0;
-      left: -48px;
-
-
-      line-height: 1;
-      @include desktop {
-        @include font-size(6);
-
-      }
-    }
-    >p {
-      padding-top: 48px;
-    }
-    @include desktop {
-      >p {
-        margin-top: 0;
-        padding-top: 96px;
-      }
+  @include tablet {
+    p {
+      font-size: 30px;
     }
   }
 }
