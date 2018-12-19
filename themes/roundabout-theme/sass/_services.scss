@@ -90,5 +90,28 @@
         @include section-image("../../images/normalized/two-faces-2-1200x1200.png", 300px, 'right');
       }
     }
+    div#wpsl-wrap {
+      padding-left: 15%;
+      padding-right: 3%;
+      .wpsl-search{
+        margin-bottom: 0;
+      }
+      .wpsl-dropdown span, label {
+        font-size: .8rem;
+      }
+      .wpsl-dropdown .wpsl-selected-item, .wpsl-dropdown li, .wpsl-selected-item{
+        padding: 5px 12px!important;
+      }
+      #wpsl-search-input {
+        padding: 5px 12px;
+      }
+      #wpsl-search-btn {
+        padding: 5px 28px;
+        margin-top: 0; 
+      }
+      a{
+        color: $main_green;
+      }
+    }
   }
 }
