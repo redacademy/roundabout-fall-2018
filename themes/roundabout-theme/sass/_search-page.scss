@@ -5,6 +5,10 @@
 .search-results{
 
 	.site-main {
+
+		.hentry {
+			margin: 0;
+		}
 		.page-title {	
 			@include tagline;	
 			@include content-margin;
