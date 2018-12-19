@@ -1,0 +1,100 @@
+/*--------------------------------------------------------------
+# Contact-form
+--------------------------------------------------------------*/
+
+.entry-content {
+	h2{
+		font-size: 25px;
+		@include tablet{
+			font-size: 35px;
+		}
+	}
+	a{
+		color: $main_black;
+		&:active, &:focus, &:visited{
+			color: $main_black;
+		}
+		&:hover{
+			color: $hover_green;
+		}
+	}
+	form{
+		p>label{
+			font-size: 18px;
+			font-weight: 800;
+			margin: 5rem 0 0 0;
+			display: block;
+			&:first-child{
+				margin-top: 1.5rem;
+			}
+			@include tablet{
+				font-size: 30px;
+			}
+		}
+		p>input, p>textarea, input[type=email], input[type=password], input[type=tel], input[type=search], input[type=text], input[type=url]{
+			width: 100%;
+		}
+		
+		.Howcanwehelp, .Ipreffer{
+			span{
+				margin: 1em 0 0 0;
+				width: 100vw;
+				input[type=checkbox] {
+					margin-right: .5rem;
+					// color: #666;
+					// border: 4px solid #aee34d;
+					width: 2em;
+					height: 2em;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					-ms-appearance: none;
+					appearance: none;
+					border: 4px solid $main_green;
+					border-radius: 3px;
+					vertical-align: middle;
+					background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='512px' height='512px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;fill: %23800080; fill: #aee34d; fill-rule: evenodd;' xml:space='preserve'%3e%3cpath d='M448,71.9c-17.3-13.4-41.5-9.3-54.1,9.1L214,344.2l-99.1-107.3c-14.6-16.6-39.1-17.4-54.7-1.8 c-15.6,15.5-16.4,41.6-1.7,58.1c0,0,120.4,133.6,137.7,147c17.3,13.4,41.5,9.3,54.1-9.1l206.3-301.7 C469.2,110.9,465.3,85.2,448,71.9z'/%3e%3c/svg%3e");
+					background-repeat:no-repeat;
+					background-size:cover;
+					background-position:50% 50%;
+					background-size:0 0;
+					transition:.3s  ease;
+				 
+				 
+				 	&:active {
+					background-color: #ddd;
+					}
+					&:checked {
+					background-size:100% 100%;
+					}
+					&:focus {
+						outline: none;
+					}
+				}
+				input[type="reset"],
+				input[type="submit"] {
+					display:block;
+					margin:.5em 0 0;
+					padding: 1rem 2rem;
+					@include mobile-buttons;
+
+					@include tablet{
+						@include desktop-buttons;
+					}
+				 }
+			}
+		}
+		div.wpcf7-response-output {
+			margin-left: 18%;
+			padding: 0 8% 0 3%;
+		}
+		input[type="submit"] {
+			display:block;
+			margin:3em 0 0;
+			padding: 1rem 2rem;
+			width: 100%;
+			@include tablet{
+				width: 25%;
+			}
+		}
+	}
+}

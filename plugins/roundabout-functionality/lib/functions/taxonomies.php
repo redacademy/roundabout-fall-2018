@@ -49,6 +49,7 @@ function custom_taxonomy() {
 add_action( 'init', 'custom_taxonomy', 0 );
 
 
+
 /**
   * Create "Supporters Members" taxonomies
 **/
@@ -76,7 +77,6 @@ function custom_supporters_taxonomy() {
 		'items_list'                 => __( 'Items list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Items list navigation', 'text_domain' ),
 	);
-
 	$argsSupporters = array(
 		'labels'                     => $labelsSupporters,
 		'hierarchical'               => true,
@@ -86,7 +86,6 @@ function custom_supporters_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-
 	register_taxonomy( 'supporters-type', array( 'supporter' ), $argsSupporters );
 //same name to register_taxonomy
 }
