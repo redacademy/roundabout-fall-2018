@@ -58,7 +58,6 @@ function news_init() {
         'publicly_queryable' => true,
         'capability_type' => 'post',
         'show_in_rest' => true, // needed for Gutenberg to work!
-        'template_lock' => 'all', // or 'insert' to allow moving blocks
         'hierarchical' => false,
         'query_var' => true,
         'menu_icon' => 'dashicons-format-aside',

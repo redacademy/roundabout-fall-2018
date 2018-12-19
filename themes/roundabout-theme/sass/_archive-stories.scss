@@ -113,10 +113,16 @@
 
 .single-news {
 
+	.title-tags {
+		.author-title{
+			@include content-margin;
+			text-transform: lowercase;
+			font-weight: bold;
+			font-size: 1.2rem;
+		}
+	}
 	.news-tags {
 		margin-left: 17%;
-		display: flex;
-		flex-direction: column;
 
 		@include tablet {
 			display: flex;
