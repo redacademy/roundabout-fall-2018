@@ -61,6 +61,7 @@ registerBlockType( 'cgb/block-claim-block', {
 
         },
         background: {
+            default: 'none',
             type: 'string',
             source: 'attribute',
             selector: 'div[data-background]',
@@ -118,6 +119,7 @@ registerBlockType( 'cgb/block-claim-block', {
                                     {'value': 'none', label: 'None'},
                                     {'value': 'round', label: 'green round background'},
                                     {'value': 'heart', label: 'pink heart background'},
+                                    {'value': 'number', label: 'eighty plus number'},
                                 ]
                             }
                         />

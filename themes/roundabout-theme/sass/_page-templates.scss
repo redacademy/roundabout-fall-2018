@@ -43,7 +43,7 @@ header.site-header {
             }
         }
     }
-    //search 
+    //search
     form{
         order: 2;
         // width: 40px;
@@ -59,7 +59,7 @@ header.site-header {
         @include desktop-1440{
             flex-grow: 0;
         }
-         
+
         fieldset {
             margin: 0;
             padding: 0;
@@ -113,7 +113,7 @@ header.site-header {
         font-weight: 700;
         &::after{
             content: "\f004";
-            font-family: "FontAwesome"; 
+            font-family: "FontAwesome";
             position: absolute;
             color: $main_pink;
             top: 5%;
@@ -139,7 +139,7 @@ header.site-header {
         }
         &::before{
             content: "\f111";
-            font-family: "FontAwesome"; 
+            font-family: "FontAwesome";
             position: absolute;
             color: $main_white;
             // left: 50%;
@@ -204,7 +204,7 @@ header.site-header {
         order: 4;
         @include desktop{
             order: 2;
-            flex-grow: 1;        
+            flex-grow: 1;
         }
         &.toggled {
             padding: 0 0 30px 10px;
@@ -217,7 +217,7 @@ header.site-header {
                 &::after{
                     content: "\f00d";
                     font-family: "FontAwesome";
-                } 
+                }
             }
         }
 
@@ -231,7 +231,7 @@ header.site-header {
 
             &::after{
                 content: "\f0c9";
-                font-family: "FontAwesome"; 
+                font-family: "FontAwesome";
                 font-size: 1.9rem;
                 font-weight: 900;
                 display: inline-block;
@@ -360,7 +360,8 @@ body.home{
             }
         }
         .entry-content{
-            p, h1, h2, h3, h4, fieldset{
+
+            & > p, div:not(.wp-block-cgb-block-claim-block)>div>p, section > p, h1, h2, h3, h4, fieldset{
                 @include content-margin;
             }
             figure{
@@ -389,7 +390,7 @@ body:not(.post-type-archive-member):not(.member-template-default):not(.supporter
         img {
             width: 100vw;
         }
-    } 
+    }
 }
 
 .member-template-default{
@@ -404,15 +405,15 @@ body:not(.post-type-archive-member):not(.member-template-default):not(.supporter
     .post-navigation{
         .nav-links{
             .nav-previous, .nav-next{
-            background-color: $main_green;
-            color: $main_white;
-            padding: 1rem 2rem;
-            width: auto !important;
-            text-align: center;
-            font-weight: bold;
-            font-style: normal;
-            
-            &:hover {
+                background-color: $main_green;
+                color: $main_white;
+                padding: 1rem 2rem;
+                width: auto !important;
+                text-align: center;
+                font-weight: bold;
+                font-style: normal;
+
+                &:hover {
                     background-color: darken($main_pink, 10%);
                 }
             }
@@ -423,6 +424,6 @@ body:not(.post-type-archive-member):not(.member-template-default):not(.supporter
                 margin-right: 10%;
             }
         }
-        
+
     }
 }
