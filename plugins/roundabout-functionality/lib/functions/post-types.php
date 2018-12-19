@@ -45,7 +45,6 @@ function news_init() {
 	    'description' => __( 'News information pages.', 'text_domain' ),
         'labels' => $labelsnews,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
-		'taxonomies' => array( 'post_tag' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -115,7 +114,7 @@ function stories_init() {
 	    'description' => __( 'Stories information pages.', 'text_domain' ),
         'labels' => $labelsstories,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
-		'taxonomies' => array( 'categories','post_tag' ),
+		'taxonomies' => array( 'categories' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
@@ -128,7 +127,6 @@ function stories_init() {
         'publicly_queryable' => true,
         'capability_type' => 'post',
         'show_in_rest' => true, // needed for Gutenberg to work!
-        'template_lock' => 'all', // or 'insert' to allow moving blocks
         'hierarchical' => false,
         'query_var' => true,
         'menu_icon' => 'dashicons-book',
