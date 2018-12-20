@@ -92,16 +92,16 @@ h1 {
   color: $main_black;
   text-transform: uppercase;
   @include tablet{
-    font-size: 2.8rem;
+    font-size: 45px;
   }
   @include desktop{
-    font-size: 4rem;
+    font-size: 67px;
   }
 }
 
 h2 {
   font-family: $font__main;
-  font-size: 1.25rem;
+  font-size: 16px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -109,16 +109,16 @@ h2 {
   letter-spacing: 0.5px;
   color: $main_black;
   @include tablet{
-    font-size: 1.5rem;
+    font-size: 25px;
   }
   @include desktop{
-    font-size: 2rem;
+    font-size: 30px;
   }
 }
 
 h3 {
   font-family: $font__main;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -132,7 +132,7 @@ h3 {
 
 p{
   font-family: $font__main;
-  font-size: .90rem;
+  font-size: 11px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -146,17 +146,6 @@ p{
   }
 }
 
-.tagline {
-  font-family: $font__main-titles;
-  font-size: 9rem;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.13;
-  letter-spacing: 5px;
-  color: $main_white;
-}
-
 .info-numbers {
   font-family: $font__main-titles;
   font-size: 6.25rem;
@@ -166,6 +155,26 @@ p{
   line-height: 0.75;
   letter-spacing: 3px;
   color: $main_green;
+}
+
+button {
+  font-family: $font__main;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $main_white;
+  background-color: $main_pink;
+
+  height: 60px;
+  width: 240px;
+
+  &:hover {
+    background-color: darken($main_pink, 10%);
+  	}
 }
 
 .entry-meta {

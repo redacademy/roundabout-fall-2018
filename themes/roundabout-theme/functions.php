@@ -90,7 +90,7 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'profiles', get_template_directory_uri() . '/build/js/profiles.min.js', array(), '20151215', true );
-
+	wp_enqueue_script( 'load-content', get_template_directory_uri() . '/build/js/load-content.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -121,7 +121,7 @@ require get_template_directory() . '/inc/extras.php';
 
 function split_to_sections($content) {
 	$pagename = get_the_title();
-	if($pagename != 'Our services') {
+	if($pagename != 'Our services' && $pagename !='About') {
 		return $content;
 	}
 
