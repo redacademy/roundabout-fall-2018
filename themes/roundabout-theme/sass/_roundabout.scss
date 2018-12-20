@@ -1,7 +1,6 @@
 
 
-.page-id-201 {
-  @include pre-main-text("turning lives around");
+.home {
   section {
     &:nth-child(1) {
       @include section-image("../../images/normalized/flower-head-2-1200x1200.png", 300px, 'left');
