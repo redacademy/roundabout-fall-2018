@@ -65,5 +65,8 @@ $terms = get_terms( array(
 
 <?php wp_reset_postdata();?>
 
+<!-- Calling wp-logo-showcase-responsive-slider by shortcode -->
+<?php echo do_shortcode('[logoshowcase]'); ?>
+
 
 <?php get_footer(); ?>
