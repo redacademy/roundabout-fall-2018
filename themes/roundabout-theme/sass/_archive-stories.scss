@@ -29,13 +29,12 @@
 		.button-content {
 			display: flex;
 			justify-content: center;
-			padding-left: 50px;
+
 			@include tablet {
 				padding-left: 50px;
 			}
 			.load-button {
-				padding: 0.6rem 4rem;
-				margin: 1rem 0rem 4rem 0rem;
+				margin-bottom: 4rem;
 			}
 			button.load-button {
 				background-color: $main-green;
@@ -64,7 +63,7 @@
 			display: grid;
 			grid-gap: 3rem;
 			grid-template-columns: 45% 45%;
-			padding-bottom: 4rem;
+			padding-bottom: 2rem;
 		}	
 		.stories-container {
 
@@ -112,20 +111,18 @@
 --------------------------------------------------------------*/
 
 .single-news {
-	span {
-		@include content-margin;
-		text-transform: none;
-		font-size: 1rem;
-		font-weight: bold;
-		margin-bottom: 3rem;
-		@include tablet {
+
+	.title-tags {
+		.author-title{
+			@include content-margin;
+			text-transform: lowercase;
+			font-weight: bold;
 			font-size: 1.2rem;
 		}
 	}
 	.news-tags {
 		margin-left: 17%;
-		display: flex;
-		flex-direction: column;
+		margin-top: 0.5rem;
 
 		@include tablet {
 			display: flex;
@@ -133,6 +130,9 @@
 			justify-content: flex-start;
 			align-items: center;
 		}	
+		@include desktop {
+			padding-left: 0.6rem;
+		}
 
 		button {
 			width: 120px;

@@ -19,16 +19,15 @@
 			<span class="author-title">by <?php the_author(); ?></span>
 		</div>
 
+		<div class="news-tags">
+			<?php echo the_terms($post->ID,'news-tags','<button>', '</button><button>', '</button>') ;?>
+		</div>
+
 	</header><!-- .entry-header -->
 
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
-
-
-		<div class="news-tags">
-			<?php echo the_terms($post->ID,'news-tags','<button>', '</button><button>', '</button>') ;?>
-		</div>
 
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>

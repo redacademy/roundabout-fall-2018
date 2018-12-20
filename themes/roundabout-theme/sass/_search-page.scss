@@ -2,18 +2,19 @@
 # Search Page
 --------------------------------------------------------------*/
 
-.search-results, .search-no-results {
+.search-results{
 
 	.site-main {
+
+		.hentry {
+			margin: 0;
+		}
 		.page-title {	
 			@include tagline;	
 			@include content-margin;
 			padding: 0;
 			margin-top: 5%;
 		}	
-		.hentry {
-			margin: 0;
-		}
 		.entry-title, .entry-meta, .entry-summary{
 			@include content-margin;
 		}

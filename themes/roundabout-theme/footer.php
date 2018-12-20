@@ -18,7 +18,7 @@
                     	<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
 					</div>
 
-					<div class="images-container">
+					<div class="images-container images-widget">
 						<img class="badth-logo" src="<?php echo get_template_directory_uri() ?>/images/badth-logo-final.jpg" alt="">
 						<img class="hcpc-logo" src="<?php echo get_template_directory_uri() ?>/images/HPC_reg-logo_CMYK.jpg" alt="">
 					</div>

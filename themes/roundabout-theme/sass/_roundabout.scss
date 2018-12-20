@@ -1,0 +1,14 @@
+
+
+.page-id-201 {
+  @include pre-main-text("turning lives around");
+  section {
+    &:nth-child(1) {
+      @include section-image("../../images/normalized/flower-head-2-1200x1200.png", 300px, 'left');
+    }
+    &:nth-child(2) {
+      @include section-image("../../images/normalized/hand-2-1200x1200.png", 300px, 'right');
+    }
+  }
+}
+

@@ -114,7 +114,7 @@ function stories_init() {
 	    'description' => __( 'Stories information pages.', 'text_domain' ),
         'labels' => $labelsstories,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments', 'custom-fields'),
-		'taxonomies' => array( 'categories','post_tag' ),
+		'taxonomies' => array( 'categories' ),
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
