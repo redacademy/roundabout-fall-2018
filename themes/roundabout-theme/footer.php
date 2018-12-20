@@ -13,7 +13,7 @@
 				<div class="footer-container">
                 	<div class="content">
                     	<?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
-                    	<?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
+                    	<?php //dynamic_sidebar( 'second-footer-widget-area' ); ?>
                     	<?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
                     	<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
 					</div>
@@ -25,7 +25,7 @@
 				</div>
 				
                 <div class="site-info">
-                    <div class="copyright-container">COPYRIGHT © <?php echo date('Y');?> Roundabout</div>
+                    <!-- <div class="copyright-container">COPYRIGHT © <?php //echo date('Y');?> Roundabout</div> -->
                     <!-- <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a> -->
                 </div><!-- .site-info -->
 
