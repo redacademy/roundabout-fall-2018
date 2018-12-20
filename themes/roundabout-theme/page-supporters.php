@@ -60,13 +60,20 @@ $terms = get_terms( array(
 		</div><!-- .content-profiles -->
 
 
+		<!-- Calling wp-logo-showcase-responsive-slider by shortcode -->
+		<header class="page-header">
+			<h1 class="page-title">Funders</h1>
+		</header>
+		<div class="content-margin">
+			<?php echo do_shortcode('[logoshowcase autoplay="true" autoplay_interval="2000" loop="true" dots="false" arrows="false"]'); ?>
+		</div>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 
+
 <?php wp_reset_postdata();?>
 
-<!-- Calling wp-logo-showcase-responsive-slider by shortcode -->
-<?php echo do_shortcode('[logoshowcase]'); ?>
 
 
 <?php get_footer(); ?>
