@@ -11,9 +11,11 @@
 			position: relative;
 			margin-left: 23%;
 			padding-top: 6%;
+			margin-bottom: 10%;
 			@include tablet {
 				margin-left: 32%;
 				padding-top: 4%;
+				margin-bottom: 6%;
 			}
 			@include desktop {
 				margin-left: 42%;
