@@ -126,6 +126,10 @@ $('button.search-submit').click(function(event) {
   $('header .icon-search').show();
   $('button.search-submit').hide();
   $('.search-field').hide('slow');
-  $('.search-form').submit();
-
-})
+  // $('.search-form').submit(); 
+  if($('.search-field').val().length != 0){
+      $('.search-form').submit();
+    }else{
+      $('.search-field').hide('slow');
+    }
+});

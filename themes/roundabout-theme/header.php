@@ -32,8 +32,7 @@
 				</nav><!-- #site-navigation -->
 
 				<a class="roundabout-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/roundabout-logo.svg" alt=""></a>
-
-				<form role="search" method="get" class="search-form" action="<?php get_search_query() ?>">
+				<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<fieldset>
 						<label>
 							<input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title="Search for:">
