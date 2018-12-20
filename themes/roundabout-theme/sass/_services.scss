@@ -90,5 +90,78 @@
         @include section-image("../../images/normalized/two-faces-2-1200x1200.png", 300px, 'right');
       }
     }
+    .content-margin {
+      margin-left: 15%;
+      padding: 0 8% 0 3%;
+
+      div#wpsl-wrap {//map
+        border: 4px solid $main_green;
+        a{
+          color: $main_green;
+        }
+
+        .wpsl-search{//search
+          margin-bottom: 0;
+          background-color: $main_white;
+        
+          .wpsl-dropdown span, label {
+            font-size: .8rem;
+          }
+          .wpsl-dropdown .wpsl-selected-item, .wpsl-dropdown li, .wpsl-selected-item{
+            padding: 5px 12px!important;
+            
+          }
+          .wpsl-dropdown.wpsl-active {
+            font-size: 0.8rem;
+          }
+          #wpsl-search-input {
+            padding: 5px 12px;
+          }
+          #wpsl-search-btn {
+            padding: 7px 20%;
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: 700;
+
+            color: $main_white;
+            border: 0px;
+            background-color: $main_pink;
+            background-repeat: no-repeat;
+            background-image: none;
+            box-shadow: none;
+          }
+          
+        }
+
+        #wpsl-result-list{//result-list
+          .wpsl-store-location{
+            p, span, span>strong {
+              font-size: .8rem;
+              line-height: 25px;
+            }
+            strong{
+              font-size:1rem;
+            }
+            p {
+              padding-left: 0;
+              margin: 0 0 3%;
+            }
+            .wpsl-more-info-listings{
+              font-size: .8rem;
+              strong{
+                font-size: .8rem;
+              }
+            }
+            .wpsl-store-details.wpsl-store-listing::before{
+              bottom: 10px;
+            }
+          }
+          .wpsl-direction-wrap{
+            font-size: .8rem;
+          }
+        }
+
+      }
+    }
   }
 }
