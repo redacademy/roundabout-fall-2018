@@ -7,8 +7,10 @@
   @include font-size(1);
   text-decoration: none;
   background-color: $button-color;
+  color: $color__link_button;
   &:hover {
     background-color: darken($button-color, 10%);
+    color: $color__link-hover_button;
   }
   display: flex;
   justify-content: center;
