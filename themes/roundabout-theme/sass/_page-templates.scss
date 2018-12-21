@@ -38,14 +38,7 @@
                 @include content-margin;
             }
             figure{
-                margin: 0 0 300px 0;
-
-                @include tablet {
-                    margin: 0 0 250px 0;
-                }
-                @include desktop {
-                    margin: 0 0 50px 0;
-                }
+                margin: 0 0 40px 0;
             }
         }
     }

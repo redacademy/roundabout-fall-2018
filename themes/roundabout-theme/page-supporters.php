@@ -69,10 +69,9 @@ $terms = get_terms( array(
             <?php echo do_shortcode('[logoshowcase autoplay="true" autoplay_interval="2000" loop="true" dots="false" arrows="false"]'); ?>
         </div>
 
+		<?php wp_reset_postdata();?>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
-
-<?php wp_reset_postdata();?>
-
 
 <?php get_footer(); ?>
