@@ -425,7 +425,7 @@ header.site-header {
                     font-size: 15px;
                     font-weight: bold;
                 }
-                &:hover::before {
+                &:hover::before, &.current_page_item:before {
                     color: $main_white;
                     content: "";
                     position: absolute;
