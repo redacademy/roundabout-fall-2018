@@ -14,7 +14,7 @@
     }
 
     @include desktop {
-        margin: 100px 0;
+        margin: 50px 0;
     }
     
     // padding: 25px 0 0 18px;
@@ -22,13 +22,13 @@
     .footer-container {
         display: flex;
         margin-left: 18px;
-        padding: 10rem 0 3rem 0;
+        padding: 1rem 0 3rem 0;
     
         @include desktop {
             display: flex;
             justify-content: space-evenly;
             margin-left: 146px;  
-            padding: 5rem 0 3rem 0; 
+            padding: 1rem 0 3rem 0; 
         }
 
         .content {
@@ -157,5 +157,13 @@
                         }
                     }
             }
+    }
+}
+
+.page-id-107, .page-id-55 {
+    .site-footer {
+        .footer-container {
+            margin-top: 8rem;
+        }
     }
 }
