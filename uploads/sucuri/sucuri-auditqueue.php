@@ -52,3 +52,6 @@ exit(0);
 1545395721_5758:"Notice: roundabout, 127.0.0.1; Revision status has been changed; details: ID: 293,Old status: new,New status: inherit,Title: Supporters"
 1545395766_6115:"Notice: roundabout, 127.0.0.1; Page was updated; ID: 107; name: Supporters"
 1545395819_6824:"Warning: roundabout, 127.0.0.1; Post deleted: (multiple entries): Post id: 293,Post author: 1,Post type: revision,Post status: inherit,Post inserted: 2018-12-21 12:35:58,Post modified: 2018-12-21 12:35:58,Post guid: http:\/\/localhost:8888\/roundabout\/2018\/12\/21\/107-autosave-v1\/,Post title: Supporters"
+1545399143_9458:"Warning: roundabout, 127.0.0.1; Post deleted: (multiple entries): Post id: 291,Post author: 1,Post type: revision,Post status: inherit,Post inserted: 2018-12-21 12:01:35,Post modified: 2018-12-21 12:01:35,Post guid: http:\/\/localhost:8888\/roundabout\/2018\/12\/21\/74-autosave-v1\/,Post title: TSB Charity of the Year"
+1545399361_7492:"Warning: roundabout, 127.0.0.1; Widget contact-info-widget (contact-info-widget-3) added to first-footer-widget-area (#3; size 250x200)"
+1545399361_7501:"Warning: roundabout, 127.0.0.1; Widget contact-info-widget (contact-info-widget-3) added to first-footer-widget-area (#3; size 250x200)"
