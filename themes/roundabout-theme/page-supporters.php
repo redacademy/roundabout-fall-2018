@@ -72,7 +72,6 @@ $terms = get_terms( array(
 	</main><!-- #main -->
 </div><!-- #primary -->
 
+
 <?php wp_reset_postdata();?>
-
-
 <?php get_footer(); ?>
