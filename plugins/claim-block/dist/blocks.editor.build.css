@@ -36,6 +36,7 @@ div .none {
     font-size: 1rem;
     text-decoration: none;
     background-color: #ff5182;
+    color: #ffffff;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -45,7 +46,7 @@ div .none {
     cursor: pointer;
     font-weight: bold; }
     div .none button:hover, div .none a.button:hover {
-      background-color: #ff1e5d; }
+      background-color: #ff1e5d; color: #ffffff;}
     @media (min-width: 1080px) {
       div .none button, div .none a.button {
         width: 240px;
@@ -81,6 +82,7 @@ div .round {
     font-size: 1rem;
     text-decoration: none;
     background-color: #aee34d;
+    color: #ffffff;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -90,7 +92,7 @@ div .round {
     cursor: pointer;
     font-weight: bold; }
     div .round button:hover, div .round a.button:hover {
-      background-color: #9adb22; }
+      background-color: #9adb22; color: #ffffff;}
     @media (min-width: 1080px) {
       div .round button, div .round a.button {
         width: 240px;
@@ -126,6 +128,7 @@ div .heart {
     font-size: 1rem;
     text-decoration: none;
     background-color: #ff5182;
+    color: #ffffff;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -135,7 +138,7 @@ div .heart {
     cursor: pointer;
     font-weight: bold; }
     div .heart button:hover, div .heart a.button:hover {
-      background-color: #ff1e5d; }
+      background-color: #ff1e5d; color: #ffffff;}
     @media (min-width: 1080px) {
       div .heart button, div .heart a.button {
         width: 240px;
@@ -159,6 +162,7 @@ div .number {
     font-size: 1rem;
     text-decoration: none;
     background-color: #aee34d;
+    color: #ffffff;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -168,7 +172,7 @@ div .number {
     cursor: pointer;
     font-weight: bold; }
     div .number button:hover, div .number a.button:hover {
-      background-color: #9adb22; }
+      background-color: #9adb22; color: #ffffff;}
     @media (min-width: 1080px) {
       div .number button, div .number a.button {
         width: 240px;

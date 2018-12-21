@@ -30,6 +30,7 @@
       font-size: 1rem;
       text-decoration: none;
       background-color: #ff5182;
+      color: #ffffff;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -39,7 +40,8 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .none button:hover, .wp-block-cgb-block-claim-block .none a.button:hover {
-        background-color: #ff1e5d; }
+        background-color: #ff1e5d; 
+        color: #ffffff;}
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .none button, .wp-block-cgb-block-claim-block .none a.button {
           width: 240px;
@@ -74,6 +76,7 @@
       font-size: 1rem;
       text-decoration: none;
       background-color: #aee34d;
+      color: #ffffff;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -83,7 +86,8 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .round button:hover, .wp-block-cgb-block-claim-block .round a.button:hover {
-        background-color: #9adb22; }
+        background-color: #9adb22; 
+        color: #ffffff;}
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .round button, .wp-block-cgb-block-claim-block .round a.button {
           width: 240px;
@@ -118,6 +122,7 @@
       font-size: 1rem;
       text-decoration: none;
       background-color: #ff5182;
+      color: #ffffff;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -127,7 +132,8 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .heart button:hover, .wp-block-cgb-block-claim-block .heart a.button:hover {
-        background-color: #ff1e5d; }
+        background-color: #ff1e5d; 
+        color: #ffffff;}
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .heart button, .wp-block-cgb-block-claim-block .heart a.button {
           width: 240px;
@@ -150,6 +156,7 @@
       font-size: 1rem;
       text-decoration: none;
       background-color: #aee34d;
+      color: #ffffff;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -159,7 +166,8 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .number button:hover, .wp-block-cgb-block-claim-block .number a.button:hover {
-        background-color: #9adb22; }
+        background-color: #9adb22;
+        color: #ffffff; }
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .number button, .wp-block-cgb-block-claim-block .number a.button {
           width: 240px;
