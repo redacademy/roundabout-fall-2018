@@ -22,11 +22,13 @@
     .footer-container {
         display: flex;
         margin-left: 18px;
-
+        padding: 10rem 0 3rem 0;
+    
         @include desktop {
             display: flex;
             justify-content: space-evenly;
-            margin-left: 146px;
+            margin-left: 146px;  
+            padding: 5rem 0 3rem 0; 
         }
 
         .content {
@@ -62,7 +64,7 @@
 
                     li {
                         list-style-type: none;
-                        font-size: 11px;
+                        font-size: 1rem;
                         line-height: 1.8;
 
                         @include tablet {
@@ -99,10 +101,10 @@
                             }
                         }
                         @include desktop {
-                            font-size: 20px;
+                            font-size: 1.2rem;
                         }
                         @media screen and (min-width: 2560px) {
-                            font-size: 35px;
+                            font-size: 2rem;
                         }
                     }
 
@@ -155,12 +157,5 @@
                         }
                     }
             }
-    }
-    .site-info {
- 
-        .copyright-container {
-            font-size: 5px;
-            text-align: center;
-        }
     }
 }
