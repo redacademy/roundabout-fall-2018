@@ -46,3 +46,39 @@
 .bypostauthor {
 	display: block;
 }
+
+// Gutenberg 3 columns style
+.wp-block-columns {
+	margin-left: 14%;
+}
+
+.big-number {
+	color: #aee34d;
+	font-size: 5rem;
+	margin: 5rem 0 4rem 0;
+	line-height: 5px;
+	font-family: Montserrat;
+	padding: 0!important;
+	white-space: nowrap;
+	@include tablet {
+		line-height: 5px;
+		margin: 5rem 0 4rem 0;
+	}
+
+	@include desktop {
+		font-size: 6rem;
+	}
+}
+
+.text-big-number {
+	font-size: 1.4rem;
+	font-family: Martel Sans;
+	font-weight: 100;
+	padding: 0!important;
+	@include tablet {
+		font-size: 1.5rem;
+	}
+	@include desktop {
+		font-size: 2rem;
+	}
+}

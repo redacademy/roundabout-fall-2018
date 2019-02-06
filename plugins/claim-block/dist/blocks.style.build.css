@@ -40,8 +40,10 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .none button:hover, .wp-block-cgb-block-claim-block .none a.button:hover {
+
         background-color: #ff1e5d;
         color: #ffffff; }
+
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .none button, .wp-block-cgb-block-claim-block .none a.button {
           width: 240px;
@@ -86,8 +88,10 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .round button:hover, .wp-block-cgb-block-claim-block .round a.button:hover {
+
         background-color: #9adb22;
         color: #ffffff; }
+
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .round button, .wp-block-cgb-block-claim-block .round a.button {
           width: 240px;
@@ -132,8 +136,10 @@
       cursor: pointer;
       font-weight: bold; }
       .wp-block-cgb-block-claim-block .heart button:hover, .wp-block-cgb-block-claim-block .heart a.button:hover {
+
         background-color: #ff1e5d;
         color: #ffffff; }
+
       @media (min-width: 1080px) {
         .wp-block-cgb-block-claim-block .heart button, .wp-block-cgb-block-claim-block .heart a.button {
           width: 240px;
