@@ -27,7 +27,7 @@
     width: $background-size;
     height: $background-size;;
     content: '';
-    background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/#{$image}.svg") no-repeat;
+    background: url("../../../../../../wp-content/themes/roundabout-theme/images/#{$image}.svg") no-repeat;
     background-size: $background-size $background-size;;
     position: absolute;
     z-index: 0;

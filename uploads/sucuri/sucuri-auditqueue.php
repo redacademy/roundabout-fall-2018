@@ -1,17 +1,11 @@
 <?php
 // datastore=auditqueue;
-<<<<<<< HEAD
-// created_on=1548331071;
-// updated_on=1548331071;
+// created_on=1545387599;
+// updated_on=1549454011;
 exit(0);
 ?>
 1548331071_052:"Notice: 127.0.0.1; User authentication succeeded: roundabout"
 1548331072_4369:"Notice: roundabout, 127.0.0.1; Post status has been changed; details: ID: 290,Old status: new,New status: auto-draft,Title: Auto Draft"
-=======
-// created_on=1545387599;
-// updated_on=1545387664;
-exit(0);
-?>
 1545387599_8344:"Warning: roundabout, 127.0.0.1; Plugin activated: Sucuri Security - Auditing, Malware Scanner and Hardening (v1.8.19; sucuri-scanner\/sucuri.php)"
 1545389401_5072:"Warning: roundabout, 127.0.0.1; Plugin deactivated: Contact Info Widget (v1.0.0; contact-info-widget\/contact-info-widget.php)"
 1545392152_4094:"Notice: roundabout, 127.0.0.1; Member status has been changed; details: ID: 280,Old status: new,New status: auto-draft,Title: Auto Draft"
@@ -69,4 +63,9 @@ exit(0);
 1545401407_899:"Notice: roundabout, 127.0.0.1; Revision status has been changed; details: ID: 295,Old status: new,New status: inherit,Title: dghausgad"
 1545401432_3536:"Warning: roundabout, 127.0.0.1; Post moved to trash; ID: 294; name: dghausgad; status: publish"
 1545401432_3671:"Notice: roundabout, 127.0.0.1; Page status has been changed; details: ID: 294,Old status: publish,New status: trash,Title: dghausgad"
->>>>>>> 9149ca0772770c8a5597590001f1d05cf356096e
+1549454003_85:"Warning: 127.0.0.1; Post deleted: (multiple entries): Post id: 290,Post author: 1,Post type: post,Post status: auto-draft,Post inserted: 2019-01-24 11:57:52,Post modified: 2019-01-24 11:57:52,Post guid: http:\/\/localhost:8888\/roundabout\/?p=290,Post title: Auto Draft"
+1549454989_4028:"Notice: 127.0.0.1; User authentication succeeded: roundabout"
+1549454990_4817:"Notice: roundabout, 127.0.0.1; Post status has been changed; details: ID: 291,Old status: new,New status: auto-draft,Title: Auto Draft"
+1549455027_4565:"Warning: roundabout, 127.0.0.1; Plugin activated: Query Monitor (v3.2.2; query-monitor\/query-monitor.php)"
+1549455243_9723:"Notice: roundabout, 127.0.0.1; Page was updated; ID: 213; name: Roundabout Dramatherapy"
+1549455244_0768:"Notice: roundabout, 127.0.0.1; Revision status has been changed; details: ID: 292,Old status: new,New status: inherit,Title: Roundabout Dramatherapy"

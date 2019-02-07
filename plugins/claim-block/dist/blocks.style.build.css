@@ -60,7 +60,7 @@
       width: 100px;
       height: 100px;
       content: '';
-      background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
+      background: url("../../../../../../wp-content/themes/roundabout-theme/images/oval-team.svg") no-repeat;
       background-size: 100px 100px;
       position: absolute;
       z-index: 0;
@@ -108,7 +108,7 @@
       width: 100px;
       height: 100px;
       content: '';
-      background: url("../../../../../../roundabout/wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
+      background: url("../../../../../../wp-content/themes/roundabout-theme/images/heart.svg") no-repeat;
       background-size: 100px 100px;
       position: absolute;
       z-index: 0;
