@@ -108,6 +108,12 @@
   })(container);
 })();
 
+/* ------------ BURGER MENU ---------------- */
+
+$('#toggle').click(function() {
+  $(this).toggleClass('active');
+  $('#overlay').toggleClass('open');
+ });
 
 /**
  * Handles adding the movement to search button when clicking

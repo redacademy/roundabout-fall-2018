@@ -146,11 +146,17 @@ $desktop-width-1920: 1920px;
     &::before {
       content: "";
       background: url($url) no-repeat top center;
-      background-size: $height $height;
-      width: $height;
-      height: $height;
+      background-size: $height*0.7 $height*0.7;
+      width: $height*0.7;
+      height: $height*0.7;
       display: block;
       margin: $base__space-unit auto;
+
+      @include tablet {
+        background-size: $height*0.8 $height*0.8;
+        width: $height*0.8;
+        height: $height*0.8;
+      }
     }
   }
 
@@ -166,6 +172,9 @@ $desktop-width-1920: 1920px;
       position: relative;
       &::before {
         position: absolute;
+        background-size: $height $height;
+        width: $height;
+        height: $height;
         @if $side == left {
           left: -$height;
         } @else {

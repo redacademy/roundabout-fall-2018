@@ -8,8 +8,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="inner">
-		<header class="entry-header">
+  <div class="card-container">
+    <div class="card">
+      <div class="side">
+	  	<header class="entry-header">
 			<figure>
 				<?php if ( has_post_thumbnail() ) : ?>
 					<?php the_post_thumbnail( 'large' ); ?>
@@ -18,15 +20,13 @@
 
 			<h2 class="entry-title"><?php the_title() ?></h2>
 
-		</header><!-- .entry-header -->
-
-		
-		<div class="info">
+		</header>
+	  </div>
+      <div class="side back">
 			<h3 class="title"><?php the_title(); ?></h3>
 			<span class="text"><?php the_content(); ?></span>
-		</div>
-	</div>
-	
-
-</article><!-- #post-## -->
+	  </div>
+    </div>
+  </div>
+</article>
 
