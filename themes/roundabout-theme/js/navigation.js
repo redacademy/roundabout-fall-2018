@@ -139,3 +139,41 @@ $('button.search-submit').click(function(event) {
       $('.search-field').hide('slow');
     }
 });
+
+///burger search
+$('.icon-search.burger').click(function(event){
+  event.preventDefault();
+
+  $(this).hide();
+  $('button.search-submit.burger').show();
+  $('.search-field.burger').toggle('slow');
+});
+
+$('button.search-submit.burger').click(function(event) {
+  event.preventDefault();
+  $('.icon-search.burger').show();
+  $('button.search-submit.burger').hide();
+  $('.search-field.burger').hide('slow');
+  if($('.search-field.burger').val().length != 0){
+      $('.search-form.burger').submit();
+    }else{
+      $('.search-field.burger').hide('slow');
+    }
+});
+
+
+// $('button.search-submit.burger').click(function(event) {
+//   event.preventDefault();
+//   // $(this).toggle('slow');
+//   // $('.search-field').show('slow');
+//   // $('.search-field.burger').show('slow');
+
+//   $('.overly .icon-search').show();
+//   $('button.search-submit.burger').hide();
+//   $('.search-field.burger').hide('slow');
+//   if($('.search-field.burger').val().length != 0){
+//     $('.search-form.burger').submit();
+//   }else{
+//     $('.search-field.burger').hide('slow');
+//   }
+// });

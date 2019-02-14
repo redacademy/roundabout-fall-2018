@@ -37,8 +37,6 @@
 					<fieldset>
 						<label>
 							<input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title="Search for:">
-
-
 							<span class="icon-search" aria-hidden="true">
 								<i class="fa fa-search"></i>
 							</span>
@@ -64,27 +62,26 @@
 				</div>
 
 				<div class="overlay" id="overlay">
+					<!---mobile search button-->
+					<form role="search" method="get" class="search-form burger" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<fieldset>
+							<label>
+								<input type="search" class="search-field burger" placeholder="Type and press the icon..." value="" name="search" title="Search for:">
+								<span class="icon-search burger" aria-hidden="true">
+									<i class="fa fa-search"></i>
+								</span>
+							</label>
+							<button class="search-submit burger">
+								<span class="icon-search burger" aria-hidden="true">
+									<i class="fa fa-search"></i>
+								</span>
+								<span class="screen-reader-text">Search</span>
+							</button>
+						</fieldset>
+					</form>
+					<!---end mobile search button-->
+					
 					<nav class="overlay-menu">
-						<!---mobile search button-->
-						<form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<fieldset>
-								<label>
-									<input type="search" class="search-field" placeholder="Type and hit enter..." value="" name="s" title="Search for:">
-
-
-									<span class="icon-search" aria-hidden="true">
-										<i class="fa fa-search"></i>
-									</span>
-								</label>
-								<button class="search-submit">
-									<span class="icon-search" aria-hidden="true">
-										<i class="fa fa-search"></i>
-									</span>
-									<span class="screen-reader-text">Search</span>
-								</button>
-							</fieldset>
-						</form>
-						<!---end mobile search button-->
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav>
 				</div>
