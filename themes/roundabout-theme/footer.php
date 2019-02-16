@@ -6,6 +6,9 @@
  */
 
 ?>
+		<!-- Return to Top -->
+		<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up icon-chevron-up"></i></a>
+
 
             </div><!-- #content -->
 
