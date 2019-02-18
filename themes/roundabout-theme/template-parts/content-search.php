@@ -5,6 +5,14 @@
  * @package RED_Starter_Theme
  */
 
+//Preserving Search Page Results and Pagination
+
+global $query_string;
+
+wp_parse_str( $query_string, $search_query );
+$search = new WP_Query( $search_query );
+
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

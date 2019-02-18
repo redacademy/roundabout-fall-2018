@@ -41,7 +41,7 @@
 								<i class="fa fa-search"></i>
 							</span>
 						</label>
-						<button class="search-submit">
+						<button type="submit" class="search-submit">
 							<span class="icon-search" aria-hidden="true">
 								<i class="fa fa-search"></i>
 							</span>
@@ -62,7 +62,7 @@
 				</div>
 
 				<div class="overlay" id="overlay">
-					<!---mobile search button-->
+					<!---mobile search button into burger-->
 					<form role="search" method="get" class="search-form burger" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<fieldset>
 							<label>
