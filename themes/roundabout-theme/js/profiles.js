@@ -17,7 +17,7 @@ $( document ).ready(function() {
   $('.supporter.supporters-type-patrons').show();
 
   //onclick show only one type from team member
-  $('.profile-type-list a').on('click', function(){
+  $('.profile-type-list a').on('click', function(event){
     event.preventDefault();
     let selector = 'member-type-' + ($(this).attr('class')).toLowerCase().split(' ')[0];
     $('.member').hide();

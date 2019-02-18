@@ -261,7 +261,7 @@ header.site-header {
                     font-size: 30px;
                 }
             }
-            button{
+            .search-submit{
                 display: none;
                 width: auto;
                 height: 52px;
@@ -648,7 +648,7 @@ body.home{
                 color: #fff;
             }
 
-            button.search-submit.burger {
+            .search-submit.burger {
                 display: none;
                 width: 30px;
                 height: auto;
@@ -751,7 +751,7 @@ body.home{
 
 /* ---- Back to top button ---- */
 
-#return-to-top {
+#return-to-top {  
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -760,36 +760,24 @@ body.home{
     height: 40px;
     display: block;
     text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
     border-radius: 35px;
     display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    -webkit-box-shadow: 0px 3px 13px -6px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 3px 13px -6px rgba(0,0,0,0.6);
     box-shadow: 0px 3px 13px -6px rgba(0,0,0,0.6);
-}
-#return-to-top i {
-    color: #ff5182;
-    margin: 0;
-    position: relative;
-    top: 46%;
-    transform: translate(50%, -50%);
-    font-size: 20px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-#return-to-top:hover {
-    background: rgba(255, 255, 255, 0.9);
-}
-#return-to-top:hover i {
-    color: #ff5182;
-    top: 10px;
+    &:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+    i {
+        color: #ff5182;
+        margin: 0;
+        position: relative;
+        top: 46%;
+        transform: translate(50%, -50%);
+        font-size: 20px;
+        transition: all 0.3s ease;
+        &:hover {
+            color: #ff5182;
+            top: 10px;
+        }
+    }  
 }

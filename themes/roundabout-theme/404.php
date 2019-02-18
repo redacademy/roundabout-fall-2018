@@ -14,7 +14,7 @@ get_header(); ?>
 
 
 			<header class="page-header">
-				<h1 class="page-title"><?php echo esc_html( 'Oops!' ); ?></h1>
+				<h1 class="page-title"><?php echo esc_html( 'Oops!', 'RED Starter Theme' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<article class="error-404 not-found">
