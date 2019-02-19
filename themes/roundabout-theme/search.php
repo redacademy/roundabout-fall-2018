@@ -23,8 +23,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php //red_starter_numbered_pagination(); ?>
-
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
