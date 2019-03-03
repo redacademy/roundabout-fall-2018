@@ -280,6 +280,22 @@ body.page{
                 font-size: 30px;
                 text-align: left;
               }
+              .card:hover .side {
+                // IE 11 and above hack
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                  opacity: 0;
+                  transition-duration: 1s;
+                }
+              }
+              .card:hover .side.back {
+                // IE 11 and above hack
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                  opacity: 1;
+                  transform: initial;
+                  transition-duration: 1s;
+                  -ms-overflow-style: none;
+                }
+              }
               p{
                 font-size: 12px;
                 line-height: 20px;
