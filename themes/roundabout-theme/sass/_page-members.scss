@@ -250,6 +250,8 @@ body.page{
                 @include desktop{
                   margin-top: 28%;
                   text-align: left;
+                  word-spacing: normal;
+                  width: 40%;
                 }
                 @include desktop-1920{
                   margin-top: 10%;
