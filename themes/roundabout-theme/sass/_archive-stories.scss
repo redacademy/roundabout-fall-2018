@@ -54,16 +54,20 @@
 
 	.stories-wrapper.hidden .stories-container:nth-child(n+5) {
 		display: none;
-		  }
+	}
 
 	.stories-wrapper {
 		margin-left: 15%;
 		padding: 0 5% 0 3%;
-		@include desktop {
+		@include desktop {  
 			display: grid;
 			grid-gap: 3rem;
 			grid-template-columns: 45% 45%;
 			padding-bottom: 2rem;
+			// IE 11 and above hack
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				margin-right: -3rem;
+			}
 		}	
 		.stories-container {
 
@@ -92,6 +96,16 @@
 	.type-news {
 		margin-top: 3.5rem;
 
+		// IE 11 and above hack
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			width: auto;   
+			@include desktop{
+				width: 44%;
+				display: inline-block;
+				margin-right: 3rem !important;
+			}
+		}
+		
 		.entry-title {
 			margin: 1rem 0 0;
 		}
