@@ -47,6 +47,9 @@
 /* Front page */
 
 body.home{
+    h1.entry-title{
+        word-spacing: 100vw;
+    }
     .entry-content{
         figure iframe {
             width: 100vw;
