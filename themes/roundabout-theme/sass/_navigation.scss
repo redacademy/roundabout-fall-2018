@@ -453,7 +453,7 @@ header.site-header {
                     font-size: 15px;
                     font-weight: bold;
                 }
-                &:hover::before, &.current_page_item:before {
+                &:hover::before, &.current_page_item:before, &.current-menu-item:before, &.current_page_parent:before  {
                     color: $main_white;
                     content: "";
                     position: absolute;
